@@ -59,16 +59,59 @@ namespace attributemodifier
                     Tekla.Structures.Model.ModelObject ModelSideObject = _model.SelectModelObject(identifier);
                     Tekla.Structures.Model.Part modelpart = ModelSideObject as Tekla.Structures.Model.Part;
                     
-                    if (NameTextbox.Text != "") {
-                        modelpart.Name = NameTextbox.Text;
+                    if (Nametextbox.Text != "") {
+                        modelpart.Name = Nametextbox.Text;
                     }
 
-                    if (FinishTextbox.Text != "")
+                    if (Profiletextbox.Text != "")
                     {
-                        modelpart.Finish = FinishTextbox.Text;
+                        modelpart.Profile.ProfileString = Profiletextbox.Text;
                     }
 
-                   
+                    if (Materialtextbox.Text != "")
+                    {
+                        modelpart.Material.MaterialString = Materialtextbox.Text;
+                    }
+
+                    if (Finishtextbox.Text != "")
+                    {
+                        modelpart.Finish = Finishtextbox.Text;
+                    }
+                    if (Classtextbox.Text != "")
+                    {
+                        modelpart.Class = Classtextbox.Text;
+                    }
+
+
+
+                    if (Partstartnumbertextbox.Text != "")
+                    {
+                        modelpart.PartNumber.StartNumber = Int32.Parse(Partstartnumbertextbox.Text);
+                    }
+                    if (Partprefixtextbox.Text != "")
+                    {
+                        modelpart.PartNumber.Prefix = Partprefixtextbox.Text;
+                    }
+                    if (Assemblyprefixtextbox.Text != "")
+                    {
+                        modelpart.AssemblyNumber.Prefix = Assemblyprefixtextbox.Text;
+                    }
+                    if (Assemblystartnumbertextbox.Text != "")
+                    {
+                        modelpart.AssemblyNumber.StartNumber = Int32.Parse(Assemblystartnumbertextbox.Text);
+                    }
+
+
+                    /*if (Boinametextbox.Text != "")
+                    {
+                        modelpart.Finish = Finishtextbox.Text;
+                    }
+                    if (Commenttextbox.Text != "")
+                    {
+                        modelpart.Finish = Finishtextbox.Text;
+                    }*/
+
+
 
                     modelpart.Modify();
                    
@@ -85,7 +128,20 @@ namespace attributemodifier
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            Partstartnumbertextbox.Text = "";
+            Partprefixtextbox.Text = "";
+            Assemblyprefixtextbox.Text = "";
+            Assemblystartnumbertextbox.Text = "";
 
+            Nametextbox.Text = "";
+            Profiletextbox.Text = "";
+            Finishtextbox.Text = "";
+            Classtextbox.Text = "";
+            Materialtextbox.Text = "";
+
+            Boinametextbox.Text = "";
+            Commenttextbox.Text = "";
+            
         }
     }
 }
