@@ -86,7 +86,7 @@ namespace attributemodifier
 
                     if (Partstartnumbertextbox.Text != "")
                     {
-                        modelpart.PartNumber.StartNumber = Int32.Parse(Partstartnumbertextbox.Text);
+                        modelpart.PartNumber.StartNumber = int.Parse(Partstartnumbertextbox.Text);
                     }
                     if (Partprefixtextbox.Text != "")
                     {
@@ -98,20 +98,18 @@ namespace attributemodifier
                     }
                     if (Assemblystartnumbertextbox.Text != "")
                     {
-                        modelpart.AssemblyNumber.StartNumber = Int32.Parse(Assemblystartnumbertextbox.Text);
+                        modelpart.AssemblyNumber.StartNumber = int.Parse(Assemblystartnumbertextbox.Text);
                     }
 
 
-                    /*if (Boinametextbox.Text != "")
+                    if (Boinametextbox.Text != "")
                     {
-                        modelpart.Finish = Finishtextbox.Text;
+                        modelpart.SetUserProperty("USERDEFINED.BOUGHT_ITEM_NAME", Boinametextbox.Text);
                     }
                     if (Commenttextbox.Text != "")
                     {
-                        modelpart.Finish = Finishtextbox.Text;
-                    }*/
-
-
+                        modelpart.SetUserProperty("USERDEFINED.comment", Commenttextbox.Text);
+                    }
 
                     modelpart.Modify();
                    
