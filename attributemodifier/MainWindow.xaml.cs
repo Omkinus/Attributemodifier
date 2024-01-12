@@ -48,13 +48,11 @@ namespace attributemodifier
             }
 
             Tekla.Structures.Drawing.Drawing _currentdrawing = _drawinghandler.GetActiveDrawing();
-
+            
             foreach (DrawingObject drawingObject in _drawinghandler.GetDrawingObjectSelector().GetSelected())
             {
                 if (drawingObject is Tekla.Structures.Drawing.Part) {
                    
-                    var view = drawingObject.GetView() as Tekla.Structures.Drawing.View;
-                    view.Select();
                       // переключаемся с выбранного обьекта на чертеже на обьект в модели
                     Tekla.Structures.Drawing.Part part = drawingObject as Tekla.Structures.Drawing.Part;
                     Tekla.Structures.Identifier identifier = part.ModelIdentifier;
@@ -111,12 +109,27 @@ namespace attributemodifier
                     }
 
                     modelpart.Modify();
-                    view.Modify();
+                    
                  }
-               
+                
             }
-            
-          
+
+            ContainerView sheet = _currentdrawing.GetSheet();
+            DrawingObjectEnumerator allviews = sheet.GetAllViews();
+            DrawingObjectSelector dos = _drawinghandler.GetDrawingObjectSelector();
+            dos.UnselectAllObjects();
+            foreach (var view1 in allviews)
+            {
+                Tekla.Structures.Drawing.View view2 = view1 as Tekla.Structures.Drawing.View;
+                view2.Select();
+                double scale = view2.Attributes.Scale;
+                double scale2 = view2.Attributes.Scale + 1;
+                view2.Attributes.Scale = scale2;
+                
+                view2.Modify();
+                view2.Attributes.Scale = scale;
+                view2.Modify();
+            }
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -141,14 +154,6 @@ namespace attributemodifier
             Commenttextbox.Text = "";
             
         }
-
-        private static bool updateview(Tekla.Structures.Drawing.View acceptedview) {
-
-     
-                return acceptedview.Modify();
-
-           
-        }
-       
+ 
     }
 }
