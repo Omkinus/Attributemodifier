@@ -52,9 +52,10 @@ namespace attributemodifier
             foreach (DrawingObject drawingObject in _drawinghandler.GetDrawingObjectSelector().GetSelected())
             {
                 if (drawingObject is Tekla.Structures.Drawing.Part) {
-                    DrawingObjectSelector dos = _drawinghandler.GetDrawingObjectSelector();
-
-      
+                   
+                    var view = drawingObject.GetView() as Tekla.Structures.Drawing.View;
+                    view.Select();
+                      // переключаемся с выбранного обьекта на чертеже на обьект в модели
                     Tekla.Structures.Drawing.Part part = drawingObject as Tekla.Structures.Drawing.Part;
                     Tekla.Structures.Identifier identifier = part.ModelIdentifier;
                     Tekla.Structures.Model.ModelObject ModelSideObject = _model.SelectModelObject(identifier);
@@ -110,27 +111,11 @@ namespace attributemodifier
                     }
 
                     modelpart.Modify();
-                    dos.UnselectAllObjects();
+                    view.Modify();
                  }
                
             }
-            ContainerView sheet = _currentdrawing.GetSheet();
-            DrawingObjectEnumerator allviews = sheet.GetAllViews();
-            foreach (var view1 in allviews)
-            {
-                DrawingObjectSelector dos = _drawinghandler.GetDrawingObjectSelector();
-                
-                Tekla.Structures.Drawing.ViewBase view3 = view1 as Tekla.Structures.Drawing.ViewBase;
-                
-                dos.SelectObject(view3);
-
-                foreach (DrawingObject drawingObject in _drawinghandler.GetDrawingObjectSelector().GetSelected())
-                {
-                    drawingObject.Select();
-                    drawingObject.Modify();
-                }
-                return;
-            }
+            
           
         }
 

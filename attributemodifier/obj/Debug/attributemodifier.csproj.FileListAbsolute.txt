@@ -17,7 +17,6 @@ C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\bin\Debug\Tekla.
 C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\bin\Debug\Tekla.Structures.Drawing.xml
 C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\bin\Debug\Tekla.Structures.Model.xml
 C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\bin\Debug\Tekla.Structures.Plugins.xml
-C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\obj\Debug\attributemodifier.csprojAssemblyReference.cache
 C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\obj\Debug\MainWindow.g.cs
 C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\obj\Debug\App.g.cs
 C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\obj\Debug\attributemodifier_MarkupCompile.cache
@@ -29,3 +28,8 @@ C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\obj\Debug\attrib
 C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\obj\Debug\attributemodifier.csproj.CopyComplete
 C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\obj\Debug\attributemodifier.exe
 C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\obj\Debug\attributemodifier.pdb
+C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\obj\Debug\attributemodifier.csprojAssemblyReference.cache
+C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\bin\Debug\attributemodifier.exe.manifest
+C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\bin\Debug\attributemodifier.application
+C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\obj\Debug\attributemodifier.exe.manifest
+C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\obj\Debug\attributemodifier.application
