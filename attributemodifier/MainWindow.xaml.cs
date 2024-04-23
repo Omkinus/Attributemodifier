@@ -111,9 +111,22 @@ namespace attributemodifier
                     modelpart.Modify();
                     
                  }
+                if (drawingObject is Tekla.Structures.Drawing.Bolt) {
+
+                    Tekla.Structures.Drawing.Bolt bolt = drawingObject as Tekla.Structures.Drawing.Bolt;
+                    Tekla.Structures.Identifier identifier = bolt.ModelIdentifier;
+                    Tekla.Structures.Model.ModelObject ModelSideObject = _model.SelectModelObject(identifier);
+                    Tekla.Structures.Model.BoltGroup boltgroup = ModelSideObject as Tekla.Structures.Model.BoltGroup;
+
+                    if (boltsizetextbox.Text !="")
+                    {
+                        boltsizetextbox.Text = boltgroup.BoltSize.ToString();
+                    }
+
+                }
                 
             }
-
+            //cпособ чтобы обновить виды
             ContainerView sheet = _currentdrawing.GetSheet();
             DrawingObjectEnumerator allviews = sheet.GetAllViews();
             DrawingObjectSelector dos = _drawinghandler.GetDrawingObjectSelector();
@@ -136,7 +149,7 @@ namespace attributemodifier
         {
             
         }
-
+        //функция "почистить все поля"
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             Partstartnumbertextbox.Text = "";
