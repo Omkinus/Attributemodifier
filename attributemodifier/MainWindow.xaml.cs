@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using Tekla.Structures.Drawing;
 using tsm = Tekla.Structures.Model;
 using Tekla.Structures.Drawing.UI;
+using Tekla.Structures.Dialog.UIControls;
 using Tekla.Structures.Model;
 using static Tekla.Structures.Model.ReferenceModel;
 using static Tekla.Structures.Drawing.StraightDimensionSet;
@@ -167,6 +168,14 @@ namespace attributemodifier
             Commenttextbox.Text = "";
             
         }
- 
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+            Tekla.Structures.Dialog.UIControls.BoltCatalogSize catalogSize = new Tekla.Structures.Dialog.UIControls.BoltCatalogSize();
+            Tekla.Structures.Dialog.UIControls.BoltCatalogStandard catalogStandard = new Tekla.Structures.Dialog.UIControls.BoltCatalogStandard();
+            catalogSize = catalogStandard.LinkedBoltCatalogSize;
+
+        } 
     }
 }
