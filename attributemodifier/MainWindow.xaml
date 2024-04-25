@@ -44,17 +44,17 @@
                     <TextBox x:Name ="Materialtextbox" Height="21" Margin="8,237,13,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Center" Grid.Column="2" Grid.ColumnSpan="2"/>
                     <TextBlock Margin="10,31,-59,0" TextWrapping="Wrap" Text="Prefix:" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" FontSize="14" Grid.ColumnSpan="2" Grid.Column="2"/>
                     <TextBlock HorizontalAlignment="Left" Margin="127,31,0,0" TextWrapping="Wrap" Text="Start number:" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" Width="128" FontSize="14" Grid.Column="3"/>
-                    <CheckBox Content="CheckBox_partstartnumber" Grid.Column="3" HorizontalAlignment="Left" Margin="102,58,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_assstartnumber" Grid.Column="3" HorizontalAlignment="Left" Margin="102,87,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_partprefix" HorizontalAlignment="Left" Margin="108,58,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
-                    <CheckBox Content="CheckBox_assprefix" HorizontalAlignment="Left" Margin="108,87,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
-                    <CheckBox Content="CheckBox_partname" HorizontalAlignment="Left" Margin="108,139,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
-                    <CheckBox Content="CheckBox_partprofile" HorizontalAlignment="Left" Margin="108,172,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
-                    <CheckBox Content="CheckBox_finish" HorizontalAlignment="Left" Margin="108,206,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
-                    <CheckBox Content="CheckBox_material" HorizontalAlignment="Left" Margin="108,240,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
-                    <CheckBox Content="CheckBox_class" HorizontalAlignment="Left" Margin="108,273,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
-                    <CheckBox Content="CheckBox_comment" HorizontalAlignment="Left" Margin="42,354,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.Column="3"/>
-                    <CheckBox Content="CheckBox_boi" HorizontalAlignment="Left" Margin="42,385,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.Column="3"/>
+                    <CheckBox Content="CheckBox_partstartnumber" x:Name="checkbox_partstartnumber" Grid.Column="3" HorizontalAlignment="Left" Margin="107,58,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_assstartnumber" x:Name="checkbox_assstartnumber" Grid.Column="3" HorizontalAlignment="Left" Margin="107,87,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_partprefix" x:Name="checkbox_partprefix" HorizontalAlignment="Left" Margin="108,58,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
+                    <CheckBox Content="CheckBox_assprefix" x:Name="checkbox_assprefix" HorizontalAlignment="Left" Margin="108,87,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
+                    <CheckBox Content="CheckBox_partname" x:Name="checkbox_partname" HorizontalAlignment="Left" Margin="108,139,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
+                    <CheckBox Content="CheckBox_partprofile" x:Name="checkbox_partprofile" HorizontalAlignment="Left" Margin="108,172,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
+                    <CheckBox Content="CheckBox_finish"  x:Name="checkbox_finish" HorizontalAlignment="Left" Margin="108,206,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
+                    <CheckBox Content="CheckBox_material" x:Name ="checkbox_material" HorizontalAlignment="Left" Margin="108,240,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
+                    <CheckBox Content="CheckBox_class" x:Name="checkbox_class" HorizontalAlignment="Left" Margin="108,273,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
+                    <CheckBox Content="CheckBox_comment" x:Name="checkbox_comment"  HorizontalAlignment="Left" Margin="42,354,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.Column="3"/>
+                    <CheckBox Content="CheckBox_boi" x:Name="checkbox_boi" Margin="42,385,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.Column="3"/>
 
                 </Grid>
             </TabItem>
@@ -92,18 +92,18 @@
                     <TextBlock HorizontalAlignment="Left" Margin="99,359,0,0" TextWrapping="Wrap" Text="Slotted hole Y" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="2"/>
                     <UIControls:WpfBoltCatalogSize x:Name="boltcatalogsize" HorizontalAlignment="Left" Margin="211,39,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" ItemsSource="{Binding BoltSizes, ElementName=boltcatalog_standard}"/>
                     <UIControls:WpfBoltCatalogStandard x:Name="boltcatalog_standard"   HorizontalAlignment="Left" Margin="211,66,0,0" VerticalAlignment="Top" Width="120" Grid.Column="2" />
-                    <CheckBox Content="CheckBox_size" Grid.Column="2" HorizontalAlignment="Left" Margin="186,43,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_standard" Grid.Column="2" HorizontalAlignment="Left" Margin="186,70,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_bolttype" Grid.Column="2" HorizontalAlignment="Left" Margin="186,94,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_cutlength" Grid.Column="2" HorizontalAlignment="Left" Margin="186,117,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_extralength" Grid.Column="2" HorizontalAlignment="Left" Margin="186,142,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_shape" Grid.Column="2" HorizontalAlignment="Left" Margin="186,189,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_boltdistx" Grid.Column="2" HorizontalAlignment="Left" Margin="186,212,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_boltdisty" Grid.Column="2" HorizontalAlignment="Left" Margin="186,235,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_tolerance" Grid.Column="2" HorizontalAlignment="Left" Margin="186,289,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_slotted" Grid.Column="2" HorizontalAlignment="Left" Margin="186,314,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_slotholex" Grid.Column="2" HorizontalAlignment="Left" Margin="186,336,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_slotholeY" Grid.Column="2" HorizontalAlignment="Left" Margin="186,360,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_size" x:Name="checkbox_boltsize" Grid.Column="2" HorizontalAlignment="Left" Margin="186,43,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_standard" x:Name="checkbox_boltstandard" Grid.Column="2" HorizontalAlignment="Left" Margin="186,70,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_bolttype" x:Name="checkbox_bolttype" Grid.Column="2" HorizontalAlignment="Left" Margin="186,94,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_cutlength" x:Name="checkbox_cutlength" Grid.Column="2" HorizontalAlignment="Left" Margin="186,117,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_extralength" x:Name="checkbox_extralength" Grid.Column="2" HorizontalAlignment="Left" Margin="186,142,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_shape" x:Name="checkbox_shape" Grid.Column="2" HorizontalAlignment="Left" Margin="186,189,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_boltdistx" x:Name="checkbox_boltdistx" Grid.Column="2" HorizontalAlignment="Left" Margin="186,212,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_boltdisty" x:Name="checkbox_boltdisty" Grid.Column="2" HorizontalAlignment="Left" Margin="186,235,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_tolerance" x:Name="checkbox_tolerance" Grid.Column="2" HorizontalAlignment="Left" Margin="186,289,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_slotted" x:Name="checkbox_slotted" Grid.Column="2" HorizontalAlignment="Left" Margin="186,314,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_slotholex" x:Name="checkbox_slotholex" Grid.Column="2" HorizontalAlignment="Left" Margin="186,336,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_slotholeY" x:Name="checkbox_slotholey" Grid.Column="2" HorizontalAlignment="Left" Margin="186,360,0,0" VerticalAlignment="Top" FontSize="0.01"/>
 
                 </Grid>
             </TabItem>

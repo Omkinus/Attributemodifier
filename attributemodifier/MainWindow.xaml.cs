@@ -60,51 +60,48 @@ namespace attributemodifier
                     Tekla.Structures.Model.ModelObject ModelSideObject = _model.SelectModelObject(identifier);
                     Tekla.Structures.Model.Part modelpart = ModelSideObject as Tekla.Structures.Model.Part;
                     
-                    if (Nametextbox.Text != "") {
+                    if (checkbox_partname.IsChecked == true) {
                         modelpart.Name = Nametextbox.Text;
                     }
-                    if (Profiletextbox.Text != "")
+                    if (checkbox_partprofile.IsChecked == true)
                     {
                         modelpart.Profile.ProfileString = Profiletextbox.Text;
                     }
-                    if (Materialtextbox.Text != "")
+                    if (checkbox_material.IsChecked == true)
                     {
                         modelpart.Material.MaterialString = Materialtextbox.Text;
                     }
-                    if (Finishtextbox.Text != "")
+                    if (checkbox_finish.IsChecked == true)
                     {
                         modelpart.Finish = Finishtextbox.Text;
                     }
-                    if (Classtextbox.Text != "")
+                    if (checkbox_class.IsChecked == true)
                     {
                         modelpart.Class = Classtextbox.Text;
                     }
 
-
-
-                    if (Partstartnumbertextbox.Text != "")
+                    if (checkbox_partstartnumber.IsChecked == true)
                     {
                         modelpart.PartNumber.StartNumber = int.Parse(Partstartnumbertextbox.Text);
                     }
-                    if (Partprefixtextbox.Text != "")
+                    if (checkbox_partprefix.IsChecked == true)
                     {
                         modelpart.PartNumber.Prefix = Partprefixtextbox.Text;
                     }
-                    if (Assemblyprefixtextbox.Text != "")
+                    if (checkbox_assprefix.IsChecked == true)
                     {
                         modelpart.AssemblyNumber.Prefix = Assemblyprefixtextbox.Text;
                     }
-                    if (Assemblystartnumbertextbox.Text != "")
+                    if (checkbox_assstartnumber.IsChecked == true)
                     {
                         modelpart.AssemblyNumber.StartNumber = int.Parse(Assemblystartnumbertextbox.Text);
                     }
 
-
-                    if (Boinametextbox.Text != "")
+                    if (checkbox_boi.IsChecked == true)
                     {
                         modelpart.SetUserProperty("USERDEFINED.BOUGHT_ITEM_NAME", Boinametextbox.Text);
                     }
-                    if (Commenttextbox.Text != "")
+                    if (checkbox_comment.IsChecked == true)
                     {
                         modelpart.SetUserProperty("USERDEFINED.comment", Commenttextbox.Text);
                     }
@@ -112,6 +109,7 @@ namespace attributemodifier
                     modelpart.Modify();
                     
                  }
+
                 if (drawingObject is Tekla.Structures.Drawing.Bolt) {
 
                     Tekla.Structures.Drawing.Bolt bolt = drawingObject as Tekla.Structures.Drawing.Bolt;
@@ -120,13 +118,13 @@ namespace attributemodifier
                     Tekla.Structures.Model.BoltGroup boltgroup = ModelSideObject as Tekla.Structures.Model.BoltGroup;
 
                     //bolt standard
-                    if (boltcatalog_standard.SelectionBoxItemStringFormat != boltgroup.BoltStandard)
+                    if (checkbox_boltstandard.IsChecked == true)
                     {
                         boltgroup.BoltStandard = boltcatalog_standard.Text;
                     }
                     
                     //boltsize
-                   if (Convert.ToDouble(boltcatalogsize.Text) != boltgroup.BoltSize) 
+                   if (checkbox_boltsize.IsChecked == true) 
                     {
                         boltgroup.BoltSize = Convert.ToDouble(boltcatalogsize.Text);
                     }
