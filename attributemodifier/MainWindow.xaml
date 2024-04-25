@@ -87,7 +87,7 @@
                     <TextBox x:Name ="boltextralengthtextbox" HorizontalAlignment="Left" Margin="186,143,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
                     <TextBlock HorizontalAlignment="Left" Margin="10,263,0,0" TextWrapping="Wrap" Text="Holes" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" Width="299" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="6"/>
                     <TextBox x:Name="bolttolerancetextbox" HorizontalAlignment="Left" Margin="186,288,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
-                    <TextBox x:Name="boltslottedtextbox" HorizontalAlignment="Left" Margin="186,312,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
+                    
                     <TextBox x:Name="boltslothole_x_textbox" Margin="186,334,36,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
                     <TextBox x:Name="boltslothole_y_textbox" Margin="186,358,36,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
                     <TextBlock HorizontalAlignment="Left" Margin="95,211,0,0" TextWrapping="Wrap" Text="Bolt dist X" VerticalAlignment="Top" Grid.Column="5"/>
@@ -114,6 +114,7 @@
 
                     <Button Grid.ColumnSpan="6" Margin="10,429,284,10" Content="Select all" Click="Button_Click_1" Width="100" Height="40" />
                     <Button Grid.Column="5" Margin="70,429,172,10" RenderTransformOrigin="0.5,0.5" Content="Unselect all" Click="Button_Click_4" Width="100" Height="40" />
+                    <ComboBox x:Name="combobox_slotted" Grid.Column="5" HorizontalAlignment="Left" Margin="186,309,0,0" VerticalAlignment="Top" Width="120"/>
 
 
                 </Grid>

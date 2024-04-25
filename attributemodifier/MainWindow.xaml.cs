@@ -21,6 +21,7 @@ using static Tekla.Structures.Model.ReferenceModel;
 using static Tekla.Structures.Drawing.StraightDimensionSet;
 using Tekla.Structures.Model.UI;
 using System.Collections;
+using System.Globalization;
 
 namespace attributemodifier
 {
@@ -40,12 +41,12 @@ namespace attributemodifier
             combobox_bolttype.Items.Add("Site");
             combobox_bolttype.Items.Add("Workshop");
 
-            
+            combobox_slotted.Items.Add("Oversized");
+            combobox_slotted.Items.Add("Slotted");
 
         }
 
-
-
+        /*---------------------------------------КНОПКИ----------------------------------------------------*/
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             tsm.Model _model = new tsm.Model();
@@ -155,6 +156,39 @@ namespace attributemodifier
                         }
                     }
 
+                    //bolt cutlength
+                    if (checkbox_cutlength.IsChecked == true) 
+                    {
+                        Tekla.Structures.Datatype.Distance cutlengthdistance = 
+                            Tekla.Structures.Datatype.Distance.FromFractionalFeetAndInchesString(Convert.ToString(boltcutlengthtextbox.Text));
+
+                        double cutlengthdistancedouble = cutlengthdistance.ConvertTo(Tekla.Structures.Datatype.Distance.UnitType.Millimeter);
+                        boltgroup.CutLength = cutlengthdistancedouble;
+                    }
+                    //bolt extralength
+                    if (checkbox_extralength.IsChecked == true)
+                    {
+                        Tekla.Structures.Datatype.Distance extralengthdistance =
+                        Tekla.Structures.Datatype.Distance.FromFractionalFeetAndInchesString(Convert.ToString(boltextralengthtextbox.Text));
+
+                        double extralengthdistancedouble = extralengthdistance.ConvertTo(Tekla.Structures.Datatype.Distance.UnitType.Millimeter);
+                        boltgroup.ExtraLength = extralengthdistancedouble;
+                    }
+
+                    //bolt hole type
+                    if (checkbox_slotted.IsChecked == true)
+                    {
+                        switch (combobox_slotted.SelectedItem)
+                        {
+                            case "Slotted":
+                                boltgroup.HoleType = BoltGroup.BoltHoleTypeEnum.HOLE_TYPE_SLOTTED;
+                                break;
+                            case "Oversized":
+                                boltgroup.HoleType = BoltGroup.BoltHoleTypeEnum.HOLE_TYPE_OVERSIZED;
+                                break;
+                        }
+                    }
+
                     boltgroup.Modify();
 
                 }
@@ -178,12 +212,6 @@ namespace attributemodifier
                 view2.Modify();
             }
         }
-
-
-
-
-
-        /*---------------------------------------КНОПКИ----------------------------------------------------*/
 
         //мертвое,не трогать
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
