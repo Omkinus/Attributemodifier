@@ -32,7 +32,7 @@ namespace attributemodifier
         public MainWindow()
         {
             InitializeComponent();
-
+            
         }
 
        
@@ -118,11 +118,8 @@ namespace attributemodifier
                     Tekla.Structures.Identifier identifier = bolt.ModelIdentifier;
                     Tekla.Structures.Model.ModelObject ModelSideObject = _model.SelectModelObject(identifier);
                     Tekla.Structures.Model.BoltGroup boltgroup = ModelSideObject as Tekla.Structures.Model.BoltGroup;
-
-                    if (boltsizetextbox.Text !="")
-                    {
-                        boltsizetextbox.Text = boltgroup.BoltSize.ToString();
-                    }
+                    
+                   
 
                 }
                 
@@ -169,13 +166,6 @@ namespace attributemodifier
             
         }
 
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            
-            Tekla.Structures.Dialog.UIControls.BoltCatalogSize catalogSize = new Tekla.Structures.Dialog.UIControls.BoltCatalogSize();
-            Tekla.Structures.Dialog.UIControls.BoltCatalogStandard catalogStandard = new Tekla.Structures.Dialog.UIControls.BoltCatalogStandard();
-            catalogSize = catalogStandard.LinkedBoltCatalogSize;
-
-        } 
+        
     }
 }
