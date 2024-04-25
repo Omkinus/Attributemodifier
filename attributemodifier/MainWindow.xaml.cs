@@ -32,16 +32,16 @@ namespace attributemodifier
         public MainWindow()
         {
             InitializeComponent();
-            
+            this.MouseDown += delegate { DragMove(); };
         }
 
-       
+
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             tsm.Model _model = new tsm.Model();
             DrawingHandler _drawinghandler = new DrawingHandler();
-            
+
 
             if (!_model.GetConnectionStatus() || !_drawinghandler.GetConnectionStatus())
             {
@@ -49,18 +49,20 @@ namespace attributemodifier
             }
 
             Tekla.Structures.Drawing.Drawing _currentdrawing = _drawinghandler.GetActiveDrawing();
-            
+
             foreach (DrawingObject drawingObject in _drawinghandler.GetDrawingObjectSelector().GetSelected())
             {
-                if (drawingObject is Tekla.Structures.Drawing.Part) {
-                   
-                      // переключаемся с выбранного обьекта на чертеже на обьект в модели
+                if (drawingObject is Tekla.Structures.Drawing.Part)
+                {
+
+                    // переключаемся с выбранного обьекта на чертеже на обьект в модели
                     Tekla.Structures.Drawing.Part part = drawingObject as Tekla.Structures.Drawing.Part;
                     Tekla.Structures.Identifier identifier = part.ModelIdentifier;
                     Tekla.Structures.Model.ModelObject ModelSideObject = _model.SelectModelObject(identifier);
                     Tekla.Structures.Model.Part modelpart = ModelSideObject as Tekla.Structures.Model.Part;
-                    
-                    if (checkbox_partname.IsChecked == true) {
+
+                    if (checkbox_partname.IsChecked == true)
+                    {
                         modelpart.Name = Nametextbox.Text;
                     }
                     if (checkbox_partprofile.IsChecked == true)
@@ -108,10 +110,11 @@ namespace attributemodifier
                     }
 
                     modelpart.Modify();
-                    
-                 }
 
-                if (drawingObject is Tekla.Structures.Drawing.Bolt) {
+                }
+
+                if (drawingObject is Tekla.Structures.Drawing.Bolt)
+                {
 
                     Tekla.Structures.Drawing.Bolt bolt = drawingObject as Tekla.Structures.Drawing.Bolt;
                     Tekla.Structures.Identifier identifier = bolt.ModelIdentifier;
@@ -123,18 +126,18 @@ namespace attributemodifier
                     {
                         boltgroup.BoltStandard = boltcatalog_standard.Text;
                     }
-                    
+
                     //boltsize
-                   if (checkbox_boltsize.IsChecked == true) 
+                    if (checkbox_boltsize.IsChecked == true)
                     {
                         boltgroup.BoltSize = Convert.ToDouble(boltcatalogsize.Text);
                     }
-                    
+
 
                     boltgroup.Modify();
 
                 }
-                
+
             }
             //cпособ чтобы обновить виды
             ContainerView sheet = _currentdrawing.GetSheet();
@@ -148,7 +151,7 @@ namespace attributemodifier
                 double scale = view2.Attributes.Scale;
                 double scale2 = view2.Attributes.Scale + 1;
                 view2.Attributes.Scale = scale2;
-                
+
                 view2.Modify();
                 view2.Attributes.Scale = scale;
                 view2.Modify();
@@ -157,30 +160,35 @@ namespace attributemodifier
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
+
         }
-        //функция "почистить все поля"
+        //функция "выбрать все галки на болтах"
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Partstartnumbertextbox.Text = "";
-            Partprefixtextbox.Text = "";
-            Assemblyprefixtextbox.Text = "";
-            Assemblystartnumbertextbox.Text = "";
 
-            Nametextbox.Text = "";
-            Profiletextbox.Text = "";
-            Finishtextbox.Text = "";
-            Classtextbox.Text = "";
-            Materialtextbox.Text = "";
 
-            Boinametextbox.Text = "";
-            Commenttextbox.Text = "";
-            
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            Close();
+
         }
+        //включить все галки на партах
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //выключить все галки на болтах
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+
+        }
+        //выключить все галки на партах
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
     }
 }
