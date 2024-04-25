@@ -97,6 +97,7 @@ namespace attributemodifier
                         modelpart.AssemblyNumber.StartNumber = int.Parse(Assemblystartnumbertextbox.Text);
                     }
 
+
                     if (checkbox_boi.IsChecked == true)
                     {
                         modelpart.SetUserProperty("USERDEFINED.BOUGHT_ITEM_NAME", Boinametextbox.Text);
@@ -177,6 +178,9 @@ namespace attributemodifier
             
         }
 
-        
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -58,7 +58,7 @@
 
                 </Grid>
             </TabItem>
-            <TabItem Header="Bolts" Margin="13,-2,-35,0">
+            <TabItem Header="Bolts" Margin="13,-2,-51,0">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="16*"/>
@@ -110,7 +110,7 @@
 
         </TabControl>
 
-        <Button Content="Modify" HorizontalAlignment="Left" Margin="232,450,0,-49" Width="146" Click="Button_Click" RenderTransformOrigin="0.5,0.5" Height="39" VerticalAlignment="Top">
+        <Button Content="Modify" HorizontalAlignment="Left" Margin="244,450,0,-49" Width="146" Click="Button_Click" RenderTransformOrigin="0.5,0.5" Height="39" VerticalAlignment="Top">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -120,6 +120,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="Clear all fields" HorizontalAlignment="Left" Height="38" Margin="29,450,0,-48" VerticalAlignment="Top" Width="138" Click="Button_Click_1"/>
+        <Button Content="Clear all fields" HorizontalAlignment="Left" Height="38" Margin="12,450,0,-48" VerticalAlignment="Top" Width="138" Click="Button_Click_1"/>
+        <Button Content="X" HorizontalAlignment="Left" Margin="342,0,0,0" VerticalAlignment="Top" Width="58" FontSize="16" Height="22" FontWeight="Bold"  FontFamily="Arial Black" Background="#FFF94848" AutomationProperties.Name="shutdownbutton" Click="Button_Click_3"/>
     </Grid>
 </Window>
