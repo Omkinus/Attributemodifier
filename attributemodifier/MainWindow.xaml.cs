@@ -189,6 +189,7 @@ namespace attributemodifier
                         }
                     }
 
+
                     boltgroup.Modify();
 
                 }
@@ -239,7 +240,7 @@ namespace attributemodifier
             checkbox_slotholex.IsChecked = true;
             checkbox_slotholey.IsChecked = true;
             checkbox_tolerance.IsChecked = true;
-            checkbox_shape.IsChecked = true;
+            
         }
 
         //выключить все галки на болтах
@@ -256,7 +257,7 @@ namespace attributemodifier
             checkbox_slotholex.IsChecked = false;
             checkbox_slotholey.IsChecked = false;
             checkbox_tolerance.IsChecked = false;
-            checkbox_shape.IsChecked = false;
+            
         }
 
         //включить все галки на партах
