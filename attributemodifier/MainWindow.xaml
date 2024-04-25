@@ -79,12 +79,7 @@
                     <TextBlock HorizontalAlignment="Left" Margin="131,335,0,0" TextWrapping="Wrap" Text="Slotted hole X" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="1"/>
                     <TextBlock HorizontalAlignment="Left" Margin="131,359,0,0" TextWrapping="Wrap" Text="Slotted hole Y" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="1"/>
                     <UIControls:WpfBoltCatalogSize x:Name="boltcatalogsize" HorizontalAlignment="Left" Margin="211,37,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" ItemsSource="{Binding BoltSizes, ElementName=boltcatalog_standard}"/>
-                    <UIControls:WpfBoltCatalogStandard x:Name="boltcatalog_standard"   HorizontalAlignment="Left" Margin="211,66,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"  >
-                        <UIControls:WpfBoltCatalogStandard.BindingGroup>
-                            <BindingGroup Name="boltcatalogsize"/>
-                        </UIControls:WpfBoltCatalogStandard.BindingGroup>
-                    </UIControls:WpfBoltCatalogStandard>
-
+                    <UIControls:WpfBoltCatalogStandard x:Name="boltcatalog_standard"   HorizontalAlignment="Left" Margin="211,66,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1" />
                 </Grid>
             </TabItem>
 
