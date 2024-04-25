@@ -54,14 +54,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="attributemodifier.exe" size="53208">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="attributemodifier.exe" size="54232">
       <assemblyIdentity name="attributemodifier" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Q+TRp++S+SnjAGiAQF1f+GeDqPM++mR3aY5yrrLJvAI=</dsig:DigestValue>
+        <dsig:DigestValue>VEGlN1mXTG/EkDWhmCP7TyPicdXz6HzBhBjb0KDO1Bw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -33,6 +33,15 @@ namespace attributemodifier
         {
             InitializeComponent();
             this.MouseDown += delegate { DragMove(); };
+
+            Tekla.Structures.Datatype.Distance.CurrentUnitType = Tekla.Structures.Datatype.Distance.UnitType.Inch;
+            Tekla.Structures.Datatype.Distance.UseFractionalFormat = true;
+
+            combobox_bolttype.Items.Add("Site");
+            combobox_bolttype.Items.Add("Workshop");
+
+            
+
         }
 
 
@@ -115,13 +124,13 @@ namespace attributemodifier
 
                 if (drawingObject is Tekla.Structures.Drawing.Bolt)
                 {
-
+                    //находим болтовую группу в модели
                     Tekla.Structures.Drawing.Bolt bolt = drawingObject as Tekla.Structures.Drawing.Bolt;
                     Tekla.Structures.Identifier identifier = bolt.ModelIdentifier;
                     Tekla.Structures.Model.ModelObject ModelSideObject = _model.SelectModelObject(identifier);
                     Tekla.Structures.Model.BoltGroup boltgroup = ModelSideObject as Tekla.Structures.Model.BoltGroup;
 
-                    //bolt standard
+                    //обработка bolt_standard
                     if (checkbox_boltstandard.IsChecked == true)
                     {
                         boltgroup.BoltStandard = boltcatalog_standard.Text;
@@ -132,7 +141,19 @@ namespace attributemodifier
                     {
                         boltgroup.BoltSize = Convert.ToDouble(boltcatalogsize.Text);
                     }
-
+                    //bolt type
+                    if (checkbox_bolttype.IsChecked == true) 
+                    {
+                        switch (combobox_bolttype.SelectedItem)
+                        {
+                            case "Site":
+                                boltgroup.BoltType = BoltGroup.BoltTypeEnum.BOLT_TYPE_SITE;
+                                break;
+                            case "Workshop":
+                                boltgroup.BoltType = BoltGroup.BoltTypeEnum.BOLT_TYPE_WORKSHOP;
+                                break;
+                        }
+                    }
 
                     boltgroup.Modify();
 
@@ -158,6 +179,13 @@ namespace attributemodifier
             }
         }
 
+
+
+
+
+        /*---------------------------------------КНОПКИ----------------------------------------------------*/
+
+        //мертвое,не трогать
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
@@ -168,7 +196,6 @@ namespace attributemodifier
         {
             Close();
         }
-
 
         //включить все галки на болтах
         private void Button_Click_1(object sender, RoutedEventArgs e)

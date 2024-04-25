@@ -71,20 +71,20 @@
                         <ColumnDefinition Width="5*"/>
                         <ColumnDefinition Width="342*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBox x:Name="boltcutlengthtextbox" Margin="186,115,36,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
+                    <TextBox x:Name="boltcutlengthtextbox" Margin="186,118,36,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
                     <TextBlock HorizontalAlignment="Left" Margin="128,0,0,421" TextWrapping="Wrap" Text="Size" VerticalAlignment="Bottom" Grid.Column="5"/>
                     <TextBlock HorizontalAlignment="Left" Margin="102,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.528,-0.47" Grid.Column="5"><Run Text="Standard"/></TextBlock>
-                    <TextBlock HorizontalAlignment="Left" Margin="16,92,0,0" TextWrapping="Wrap" Text="Bolt type (site/workshop)" VerticalAlignment="Top" Grid.Column="5"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="16,95,0,0" TextWrapping="Wrap" Text="Bolt type (site/workshop)" VerticalAlignment="Top" Grid.Column="5"/>
                     <TextBlock HorizontalAlignment="Left" Margin="10,16,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" Width="299" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="6"><Run Text="Bolt"/></TextBlock>
-                    <TextBlock HorizontalAlignment="Left" Margin="94,115,0,0" TextWrapping="Wrap" Text="Cut length" VerticalAlignment="Top" RenderTransformOrigin="0.541,-0.123" Grid.Column="5"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="86,140,0,0" TextWrapping="Wrap" Text="Extra length" VerticalAlignment="Top" Grid.Column="5"/>
-                    <TextBox HorizontalAlignment="Left" Margin="186,92,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="94,118,0,0" TextWrapping="Wrap" Text="Cut length" VerticalAlignment="Top" RenderTransformOrigin="0.541,-0.123" Grid.Column="5"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="86,143,0,0" TextWrapping="Wrap" Text="Extra length" VerticalAlignment="Top" Grid.Column="5"/>
+                    <ComboBox x:Name="combobox_bolttype" Grid.Column="5" HorizontalAlignment="Left" Margin="186,92,0,0" VerticalAlignment="Top" Width="120" Height="20"/>
                     <TextBox x:Name="boltshapetextbox" HorizontalAlignment="Left" Margin="186,187,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
                     <TextBlock HorizontalAlignment="Left" Margin="10,161,0,0" TextWrapping="Wrap" Text="Bolt group" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" Width="299" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="6"/>
                     <TextBlock HorizontalAlignment="Left" Margin="116,188,0,0" TextWrapping="Wrap" Text="Shape" VerticalAlignment="Top" Grid.Column="5"/>
                     <TextBox x:Name="boltdistx"  HorizontalAlignment="Left" Margin="186,210,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
                     <TextBox x:Name="boltdisty" Margin="186,233,36,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
-                    <TextBox x:Name ="boltextralengthtextbox" HorizontalAlignment="Left" Margin="186,140,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
+                    <TextBox x:Name ="boltextralengthtextbox" HorizontalAlignment="Left" Margin="186,143,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
                     <TextBlock HorizontalAlignment="Left" Margin="10,263,0,0" TextWrapping="Wrap" Text="Holes" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" Width="299" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="6"/>
                     <TextBox x:Name="bolttolerancetextbox" HorizontalAlignment="Left" Margin="186,288,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
                     <TextBox x:Name="boltslottedtextbox" HorizontalAlignment="Left" Margin="186,312,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
@@ -100,9 +100,9 @@
                     <UIControls:WpfBoltCatalogStandard x:Name="boltcatalog_standard"   HorizontalAlignment="Left" Margin="186,66,0,0" VerticalAlignment="Top" Width="120" Grid.Column="5" />
                     <CheckBox Content="CheckBox_size" x:Name="checkbox_boltsize" Grid.Column="5" HorizontalAlignment="Left" Margin="161,43,0,0" VerticalAlignment="Top" FontSize="0.01"/>
                     <CheckBox Content="CheckBox_standard" x:Name="checkbox_boltstandard" Grid.Column="5" HorizontalAlignment="Left" Margin="161,70,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_bolttype" x:Name="checkbox_bolttype" Grid.Column="5" HorizontalAlignment="Left" Margin="161,94,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_cutlength" x:Name="checkbox_cutlength" Grid.Column="5" HorizontalAlignment="Left" Margin="161,117,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_extralength" x:Name="checkbox_extralength" Grid.Column="5" HorizontalAlignment="Left" Margin="161,142,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_bolttype" x:Name="checkbox_bolttype" Grid.Column="5" HorizontalAlignment="Left" Margin="161,95,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_cutlength" x:Name="checkbox_cutlength" Grid.Column="5" HorizontalAlignment="Left" Margin="161,120,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_extralength" x:Name="checkbox_extralength" Grid.Column="5" HorizontalAlignment="Left" Margin="161,145,0,0" VerticalAlignment="Top" FontSize="0.01"/>
                     <CheckBox Content="CheckBox_shape" x:Name="checkbox_shape" Grid.Column="5" HorizontalAlignment="Left" Margin="161,189,0,0" VerticalAlignment="Top" FontSize="0.01"/>
                     <CheckBox Content="CheckBox_boltdistx" x:Name="checkbox_boltdistx" Grid.Column="5" HorizontalAlignment="Left" Margin="161,212,0,0" VerticalAlignment="Top" FontSize="0.01"/>
                     <CheckBox Content="CheckBox_boltdisty" x:Name="checkbox_boltdisty" Grid.Column="5" HorizontalAlignment="Left" Margin="161,235,0,0" VerticalAlignment="Top" FontSize="0.01"/>
@@ -114,6 +114,7 @@
 
                     <Button Grid.ColumnSpan="6" Margin="10,429,284,10" Content="Select all" Click="Button_Click_1" Width="100" Height="40" />
                     <Button Grid.Column="5" Margin="70,429,172,10" RenderTransformOrigin="0.5,0.5" Content="Unselect all" Click="Button_Click_4" Width="100" Height="40" />
+
 
                 </Grid>
             </TabItem>
