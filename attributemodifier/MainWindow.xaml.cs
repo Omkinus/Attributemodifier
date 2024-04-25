@@ -119,17 +119,19 @@ namespace attributemodifier
                     Tekla.Structures.Model.ModelObject ModelSideObject = _model.SelectModelObject(identifier);
                     Tekla.Structures.Model.BoltGroup boltgroup = ModelSideObject as Tekla.Structures.Model.BoltGroup;
 
-
-                    //boltgroup.BoltSize = Convert.ToDouble(boltcatalogsize.SelectionBoxItem);
+                    //bolt standard
                     if (boltcatalog_standard.SelectionBoxItemStringFormat != boltgroup.BoltStandard)
                     {
-                             boltgroup.BoltStandard = boltcatalog_standard.Text;
+                        boltgroup.BoltStandard = boltcatalog_standard.Text;
                     }
+                    
+                    //boltsize
                    if (Convert.ToDouble(boltcatalogsize.Text) != boltgroup.BoltSize) 
                     {
                         boltgroup.BoltSize = Convert.ToDouble(boltcatalogsize.Text);
                     }
                     
+
                     boltgroup.Modify();
 
                 }
