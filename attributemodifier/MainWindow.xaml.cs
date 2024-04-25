@@ -162,31 +162,78 @@ namespace attributemodifier
         {
 
         }
-        //функция "выбрать все галки на болтах"
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
 
-
-        }
-
+        //Выключатель
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-
+            Close();
         }
-        //включить все галки на партах
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+
+
+        //включить все галки на болтах
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-
+            checkbox_boltsize.IsChecked = true;
+            checkbox_boltstandard.IsChecked = true;
+            checkbox_bolttype.IsChecked = true;
+            checkbox_boltdistx.IsChecked = true;
+            checkbox_boltdisty.IsChecked = true;
+            checkbox_cutlength.IsChecked = true;
+            checkbox_extralength.IsChecked = true;
+            checkbox_slotted.IsChecked = true;
+            checkbox_slotholex.IsChecked = true;
+            checkbox_slotholey.IsChecked = true;
+            checkbox_tolerance.IsChecked = true;
+            checkbox_shape.IsChecked = true;
         }
+
         //выключить все галки на болтах
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-
+            checkbox_boltsize.IsChecked = false;
+            checkbox_boltstandard.IsChecked = false;
+            checkbox_bolttype.IsChecked = false;
+            checkbox_boltdistx.IsChecked = false;
+            checkbox_boltdisty.IsChecked = false;
+            checkbox_cutlength.IsChecked = false;
+            checkbox_extralength.IsChecked = false;
+            checkbox_slotted.IsChecked = false;
+            checkbox_slotholex.IsChecked = false;
+            checkbox_slotholey.IsChecked = false;
+            checkbox_tolerance.IsChecked = false;
+            checkbox_shape.IsChecked = false;
         }
+
+        //включить все галки на партах
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            checkbox_assprefix.IsChecked = true;
+            checkbox_assstartnumber.IsChecked = true;
+            checkbox_partprefix.IsChecked = true;
+            checkbox_partstartnumber.IsChecked = true;
+            checkbox_partname.IsChecked = true;
+            checkbox_partprofile.IsChecked = true;
+            checkbox_finish.IsChecked = true;
+            checkbox_material.IsChecked = true;
+            checkbox_class.IsChecked = true;
+            checkbox_comment.IsChecked = true;
+            checkbox_boi.IsChecked = true;
+        }
+
         //выключить все галки на партах
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-
+            checkbox_assprefix.IsChecked = false;
+            checkbox_assstartnumber.IsChecked = false;
+            checkbox_partprefix.IsChecked = false;
+            checkbox_partstartnumber.IsChecked = false;
+            checkbox_partname.IsChecked = false;
+            checkbox_partprofile.IsChecked = false;
+            checkbox_finish.IsChecked = false;
+            checkbox_material.IsChecked = false;
+            checkbox_class.IsChecked = false;
+            checkbox_comment.IsChecked = false;
+            checkbox_boi.IsChecked = false;
         }
 
 

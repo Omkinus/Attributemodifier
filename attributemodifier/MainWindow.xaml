@@ -16,34 +16,35 @@
                         <ColumnDefinition Width="56*"/>
                         <ColumnDefinition Width="4*"/>
                         <ColumnDefinition Width="6*"/>
-                        <ColumnDefinition Width="131*"/>
+                        <ColumnDefinition Width="112*"/>
+                        <ColumnDefinition Width="19*"/>
                     </Grid.ColumnDefinitions>
 
                     <TextBlock HorizontalAlignment="Left" Margin="13,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.174,0.627" FontSize="14"><Run Text="Name"/></TextBlock>
                     <TextBlock HorizontalAlignment="Left" Margin="13,190,0,0" TextWrapping="Wrap" Text="Profile" VerticalAlignment="Top" Width="54" RenderTransformOrigin="-0.074,0.375" FontSize="14"/>
                     <TextBlock HorizontalAlignment="Left" Margin="13,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" FontSize="14" RenderTransformOrigin="0.494,1.182"><Run Text="Finish"/></TextBlock>
-                    <TextBox x:Name ="Nametextbox" Height="20" Margin="8,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Grid.Column="2" Grid.ColumnSpan="2"/>
-                    <TextBox x:Name ="Profiletextbox" Height="20" Margin="8,190,13,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Center" Grid.Column="2" Grid.ColumnSpan="2"/>
-                    <TextBox x:Name ="Finishtextbox" Height="20" Margin="8,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Grid.Column="2" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name ="Nametextbox" Height="20" Margin="8,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Grid.Column="2" Grid.ColumnSpan="3"/>
+                    <TextBox x:Name ="Profiletextbox" Height="20" Margin="8,190,13,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Center" Grid.Column="2" Grid.ColumnSpan="3"/>
+                    <TextBox x:Name ="Finishtextbox" Height="20" Margin="8,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Grid.Column="2" Grid.ColumnSpan="3"/>
                     <TextBlock HorizontalAlignment="Left" Margin="10,124,0,0" TextWrapping="Wrap" Text="Attributes" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" FontWeight="Bold" FontSize="16" Width="178" Grid.ColumnSpan="4"/>
                     <TextBlock HorizontalAlignment="Left" Margin="13,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" RenderTransformOrigin="0.944,6.375" Text="Class" FontSize="14"/>
-                    <TextBox x:Name ="Classtextbox" Height="21" Margin="8,290,13,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Center" Grid.Column="2" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name ="Classtextbox" Height="21" Margin="8,290,13,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Center" Grid.Column="2" Grid.ColumnSpan="3"/>
                     <TextBlock HorizontalAlignment="Left" Margin="13,317,0,0" TextWrapping="Wrap" Text="User-defined attributes" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" FontWeight="Bold" FontSize="16" Width="229" Grid.ColumnSpan="4"/>
                     <TextBlock HorizontalAlignment="Left" Margin="13,353,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" RenderTransformOrigin="0.944,6.375" Text="Comment" FontSize="14"/>
                     <TextBlock HorizontalAlignment="Left" Margin="13,384,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.944,6.375" Text="Bought Out Item Name" FontSize="14" Grid.ColumnSpan="4"/>
-                    <TextBox x:Name ="Boinametextbox" Height="21" Margin="62,382,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Grid.Column="3"/>
-                    <TextBox x:Name ="Commenttextbox" Height="21" Margin="62,351,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" FontSize="14" Grid.Column="3"/>
+                    <TextBox x:Name ="Boinametextbox" Height="21" Margin="62,382,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Grid.Column="3" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name ="Commenttextbox" Height="21" Margin="62,351,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="190" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" FontSize="14" Grid.Column="3" Grid.ColumnSpan="2"/>
                     <TextBlock HorizontalAlignment="Left" Margin="10,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" Width="299" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="4"><Run Text="Numbering series"/></TextBlock>
                     <TextBlock HorizontalAlignment="Left" Margin="10,65,0,0" TextWrapping="Wrap" Text="Part" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" Width="128" FontSize="14" Grid.ColumnSpan="4"/>
                     <TextBlock HorizontalAlignment="Left" Margin="10,94,0,0" TextWrapping="Wrap" Text="Assembly" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" Width="128" FontSize="14" Grid.ColumnSpan="4"/>
                     <TextBox x:Name ="Partprefixtextbox" Height="21" Margin="8,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Grid.ColumnSpan="2" Grid.Column="2"/>
                     <TextBox x:Name ="Assemblyprefixtextbox" Height="21" Margin="8,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" RenderTransformOrigin="0.518,1" Grid.ColumnSpan="2" Grid.Column="2"/>
-                    <TextBox x:Name ="Partstartnumbertextbox" Height="21" Margin="127,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Grid.Column="3"/>
-                    <TextBox x:Name ="Assemblystartnumbertextbox" Height="21" Margin="127,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" RenderTransformOrigin="0.501,1.292" Grid.Column="3"/>
+                    <TextBox x:Name ="Partstartnumbertextbox" Height="21" Margin="127,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Grid.Column="3" Grid.ColumnSpan="2"/>
+                    <TextBox x:Name ="Assemblystartnumbertextbox" Height="21" Margin="127,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" RenderTransformOrigin="0.501,1.292" Grid.Column="3" Grid.ColumnSpan="2"/>
                     <TextBlock HorizontalAlignment="Left" Margin="13,258,0,202" TextWrapping="Wrap" VerticalAlignment="Center" Width="54" RenderTransformOrigin="0.944,6.375" Text="Material" FontSize="14"/>
-                    <TextBox x:Name ="Materialtextbox" Height="21" Margin="8,257,13,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Center" Grid.Column="2" Grid.ColumnSpan="2"/>
-                    <TextBlock Margin="10,41,-59,0" TextWrapping="Wrap" Text="Prefix:" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" FontSize="14" Grid.ColumnSpan="2" Grid.Column="2"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="127,41,0,0" TextWrapping="Wrap" Text="Start number:" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" Width="128" FontSize="14" Grid.Column="3"/>
+                    <TextBox x:Name ="Materialtextbox" Height="21" Margin="8,257,13,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Center" Grid.Column="2" Grid.ColumnSpan="3"/>
+                    <TextBlock Margin="10,41,-59,0" TextWrapping="Wrap" Text="Prefix:" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" FontSize="14" Grid.ColumnSpan="3" Grid.Column="2"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="127,41,0,0" TextWrapping="Wrap" Text="Start number:" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" Width="128" FontSize="14" Grid.Column="3" Grid.ColumnSpan="2"/>
                     <CheckBox Content="CheckBox_partstartnumber" x:Name="checkbox_partstartnumber" Grid.Column="3" HorizontalAlignment="Left" Margin="107,68,0,0" VerticalAlignment="Top" FontSize="0.01"/>
                     <CheckBox Content="CheckBox_assstartnumber" x:Name="checkbox_assstartnumber" Grid.Column="3" HorizontalAlignment="Left" Margin="107,97,0,0" VerticalAlignment="Top" FontSize="0.01"/>
                     <CheckBox Content="CheckBox_partprefix" x:Name="checkbox_partprefix" HorizontalAlignment="Left" Margin="108,68,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
@@ -54,10 +55,10 @@
                     <CheckBox Content="CheckBox_material" x:Name ="checkbox_material" HorizontalAlignment="Left" Margin="108,260,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
                     <CheckBox Content="CheckBox_class" x:Name="checkbox_class" HorizontalAlignment="Left" Margin="108,293,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
                     <CheckBox Content="CheckBox_comment" x:Name="checkbox_comment"  HorizontalAlignment="Left" Margin="42,354,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.Column="3"/>
-                    <CheckBox Content="CheckBox_boi" x:Name="checkbox_boi" Margin="42,385,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.Column="3"/>
+                    <CheckBox Content="CheckBox_boi" x:Name="checkbox_boi" Margin="42,385,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.Column="3" Grid.ColumnSpan="2"/>
 
                     <Button Margin="10,428,2,11" Content="Select all" Click="Button_Click_2" Width="100" Height="40.1" RenderTransformOrigin="0.36,0.374" />
-                    <Button Margin="2,428,172,11" RenderTransformOrigin="0.5,0.5" Content="Unselect all" Grid.Column="2" Width="100" Height="40" Grid.ColumnSpan="2" Click="Button_Click_5" />
+                    <Button Margin="2,428,134,11" RenderTransformOrigin="0.5,0.5" Content="Unselect all" Grid.Column="2" Width="100" Height="40" Grid.ColumnSpan="2" Click="Button_Click_5" />
                 </Grid>
             </TabItem>
             <TabItem Header="BOLTS" Margin="13,-2,-51,0">
