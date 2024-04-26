@@ -51,7 +51,7 @@ namespace attributemodifier
         {
             tsm.Model _model = new tsm.Model();
             DrawingHandler _drawinghandler = new DrawingHandler();
-
+           
 
             if (!_model.GetConnectionStatus() || !_drawinghandler.GetConnectionStatus())
             {
@@ -131,12 +131,11 @@ namespace attributemodifier
                     Tekla.Structures.Model.ModelObject ModelSideObject = _model.SelectModelObject(identifier);
                     Tekla.Structures.Model.BoltGroup boltgroup = ModelSideObject as Tekla.Structures.Model.BoltGroup;
 
-                    //обработка bolt_standard
+                    //bolt_standard
                     if (checkbox_boltstandard.IsChecked == true)
                     {
                         boltgroup.BoltStandard = boltcatalog_standard.Text;
                     }
-
                     //boltsize
                     if (checkbox_boltsize.IsChecked == true)
                     {
@@ -155,7 +154,6 @@ namespace attributemodifier
                                 break;
                         }
                     }
-
                     //bolt cutlength
                     if (checkbox_cutlength.IsChecked == true) 
                     {
@@ -175,6 +173,15 @@ namespace attributemodifier
                         boltgroup.ExtraLength = extralengthdistancedouble;
                     }
 
+                    //hole tolerance
+                    if (checkbox_tolerance.IsChecked == true)
+                    {
+                        Tekla.Structures.Datatype.Distance tolerance =
+                        Tekla.Structures.Datatype.Distance.FromFractionalFeetAndInchesString(Convert.ToString(bolttolerancetextbox.Text));
+
+                        double tolerancedouble = tolerance.ConvertTo(Tekla.Structures.Datatype.Distance.UnitType.Millimeter);
+                        boltgroup.Tolerance = tolerancedouble;
+                    }
                     //bolt hole type
                     if (checkbox_slotted.IsChecked == true)
                     {
@@ -188,7 +195,24 @@ namespace attributemodifier
                                 break;
                         }
                     }
+                    //slotted hole x
+                    if (checkbox_slotholex.IsChecked == true)
+                    {
+                        Tekla.Structures.Datatype.Distance slotholex =
+                        Tekla.Structures.Datatype.Distance.FromFractionalFeetAndInchesString(Convert.ToString(boltslothole_x_textbox.Text));
 
+                        double slotholex_double = slotholex.ConvertTo(Tekla.Structures.Datatype.Distance.UnitType.Millimeter);
+                        boltgroup.SlottedHoleX = slotholex_double;
+                    }
+                    //slotted hole y
+                    if (checkbox_slotholey.IsChecked == true)
+                    {
+                        Tekla.Structures.Datatype.Distance slotholey =
+                        Tekla.Structures.Datatype.Distance.FromFractionalFeetAndInchesString(Convert.ToString(boltslothole_y_textbox.Text));
+
+                        double slotholey_double = slotholey.ConvertTo(Tekla.Structures.Datatype.Distance.UnitType.Millimeter);
+                        boltgroup.SlottedHoleY = slotholey_double;
+                    }
 
                     boltgroup.Modify();
 
@@ -232,8 +256,7 @@ namespace attributemodifier
             checkbox_boltsize.IsChecked = true;
             checkbox_boltstandard.IsChecked = true;
             checkbox_bolttype.IsChecked = true;
-            checkbox_boltdistx.IsChecked = true;
-            checkbox_boltdisty.IsChecked = true;
+           
             checkbox_cutlength.IsChecked = true;
             checkbox_extralength.IsChecked = true;
             checkbox_slotted.IsChecked = true;
@@ -249,8 +272,7 @@ namespace attributemodifier
             checkbox_boltsize.IsChecked = false;
             checkbox_boltstandard.IsChecked = false;
             checkbox_bolttype.IsChecked = false;
-            checkbox_boltdistx.IsChecked = false;
-            checkbox_boltdisty.IsChecked = false;
+          
             checkbox_cutlength.IsChecked = false;
             checkbox_extralength.IsChecked = false;
             checkbox_slotted.IsChecked = false;
@@ -292,6 +314,6 @@ namespace attributemodifier
             checkbox_boi.IsChecked = false;
         }
 
-
+        
     }
 }

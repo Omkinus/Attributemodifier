@@ -23,12 +23,12 @@
                     <TextBlock HorizontalAlignment="Left" Margin="13,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.174,0.627" FontSize="14"><Run Text="Name"/></TextBlock>
                     <TextBlock HorizontalAlignment="Left" Margin="13,190,0,0" TextWrapping="Wrap" Text="Profile" VerticalAlignment="Top" Width="54" RenderTransformOrigin="-0.074,0.375" FontSize="14"/>
                     <TextBlock HorizontalAlignment="Left" Margin="13,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" FontSize="14" RenderTransformOrigin="0.494,1.182"><Run Text="Finish"/></TextBlock>
-                    <TextBox x:Name ="Nametextbox" Height="20" Margin="8,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Grid.Column="2" Grid.ColumnSpan="3"/>
-                    <TextBox x:Name ="Profiletextbox" Height="20" Margin="8,190,13,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Center" Grid.Column="2" Grid.ColumnSpan="3"/>
-                    <TextBox x:Name ="Finishtextbox" Height="20" Margin="8,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Grid.Column="2" Grid.ColumnSpan="3"/>
+                    <TextBox x:Name ="Nametextbox" Height="20" Margin="0,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Grid.Column="1" Grid.ColumnSpan="4"/>
+                    <TextBox x:Name ="Profiletextbox" Height="20" Margin="0,190,29,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="4"/>
+                    <TextBox x:Name ="Finishtextbox" Height="20" Margin="0,223,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Grid.Column="1" Grid.ColumnSpan="4"/>
                     <TextBlock HorizontalAlignment="Left" Margin="10,124,0,0" TextWrapping="Wrap" Text="Attributes" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" FontWeight="Bold" FontSize="16" Width="178" Grid.ColumnSpan="4"/>
                     <TextBlock HorizontalAlignment="Left" Margin="13,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" RenderTransformOrigin="0.944,6.375" Text="Class" FontSize="14"/>
-                    <TextBox x:Name ="Classtextbox" Height="21" Margin="8,290,13,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Center" Grid.Column="2" Grid.ColumnSpan="3"/>
+                    <TextBox x:Name ="Classtextbox" Height="21" Margin="0,290,29,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="4"/>
                     <TextBlock HorizontalAlignment="Left" Margin="13,317,0,0" TextWrapping="Wrap" Text="User-defined attributes" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" FontWeight="Bold" FontSize="16" Width="229" Grid.ColumnSpan="4"/>
                     <TextBlock HorizontalAlignment="Left" Margin="13,353,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="98" RenderTransformOrigin="0.944,6.375" Text="Comment" FontSize="14"/>
                     <TextBlock HorizontalAlignment="Left" Margin="13,384,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" RenderTransformOrigin="0.944,6.375" Text="Bought Out Item Name" FontSize="14" Grid.ColumnSpan="4"/>
@@ -42,23 +42,24 @@
                     <TextBox x:Name ="Partstartnumbertextbox" Height="21" Margin="127,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="126" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Grid.Column="3" Grid.ColumnSpan="2"/>
                     <TextBox x:Name ="Assemblystartnumbertextbox" Height="21" Margin="127,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="125" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" RenderTransformOrigin="0.501,1.292" Grid.Column="3" Grid.ColumnSpan="2"/>
                     <TextBlock HorizontalAlignment="Left" Margin="13,258,0,202" TextWrapping="Wrap" VerticalAlignment="Center" Width="54" RenderTransformOrigin="0.944,6.375" Text="Material" FontSize="14"/>
-                    <TextBox x:Name ="Materialtextbox" Height="21" Margin="8,257,13,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Center" Grid.Column="2" Grid.ColumnSpan="3"/>
+                    <TextBox x:Name ="Materialtextbox" Height="21" Margin="0,257,29,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="253" TextChanged="TextBox_TextChanged" HorizontalAlignment="Center" Grid.Column="1" Grid.ColumnSpan="4"/>
                     <TextBlock Margin="10,41,-59,0" TextWrapping="Wrap" Text="Prefix:" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" FontSize="14" Grid.ColumnSpan="3" Grid.Column="2"/>
                     <TextBlock HorizontalAlignment="Left" Margin="127,41,0,0" TextWrapping="Wrap" Text="Start number:" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" Width="128" FontSize="14" Grid.Column="3" Grid.ColumnSpan="2"/>
                     <CheckBox Content="CheckBox_partstartnumber" x:Name="checkbox_partstartnumber" Grid.Column="3" HorizontalAlignment="Left" Margin="107,68,0,0" VerticalAlignment="Top" FontSize="0.01"/>
                     <CheckBox Content="CheckBox_assstartnumber" x:Name="checkbox_assstartnumber" Grid.Column="3" HorizontalAlignment="Left" Margin="107,97,0,0" VerticalAlignment="Top" FontSize="0.01"/>
                     <CheckBox Content="CheckBox_partprefix" x:Name="checkbox_partprefix" HorizontalAlignment="Left" Margin="108,68,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
                     <CheckBox Content="CheckBox_assprefix" x:Name="checkbox_assprefix" HorizontalAlignment="Left" Margin="108,97,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
-                    <CheckBox Content="CheckBox_partname" x:Name="checkbox_partname" HorizontalAlignment="Left" Margin="108,159,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
-                    <CheckBox Content="CheckBox_partprofile" x:Name="checkbox_partprofile" HorizontalAlignment="Left" Margin="108,192,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
-                    <CheckBox Content="CheckBox_finish"  x:Name="checkbox_finish" HorizontalAlignment="Left" Margin="108,226,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
-                    <CheckBox Content="CheckBox_material" x:Name ="checkbox_material" HorizontalAlignment="Left" Margin="108,260,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
-                    <CheckBox Content="CheckBox_class" x:Name="checkbox_class" HorizontalAlignment="Left" Margin="108,293,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3"/>
+                    <CheckBox Content="CheckBox_partname" x:Name="checkbox_partname" HorizontalAlignment="Left" Margin="92,159,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_partprofile" x:Name="checkbox_partprofile" HorizontalAlignment="Left" Margin="92,192,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_finish"  x:Name="checkbox_finish" HorizontalAlignment="Left" Margin="92,225,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_material" x:Name ="checkbox_material" HorizontalAlignment="Left" Margin="92,260,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_class" x:Name="checkbox_class" HorizontalAlignment="Left" Margin="92,293,0,0" VerticalAlignment="Top" FontSize="0.01"/>
                     <CheckBox Content="CheckBox_comment" x:Name="checkbox_comment"  HorizontalAlignment="Left" Margin="42,354,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.Column="3"/>
                     <CheckBox Content="CheckBox_boi" x:Name="checkbox_boi" Margin="42,385,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.Column="3" Grid.ColumnSpan="2"/>
 
                     <Button Margin="10,428,2,11" Content="Select all" Click="Button_Click_2" Width="100" Height="40.1" RenderTransformOrigin="0.36,0.374" />
                     <Button Margin="2,428,134,11" RenderTransformOrigin="0.5,0.5" Content="Unselect all" Grid.Column="2" Width="100" Height="40" Grid.ColumnSpan="2" Click="Button_Click_5" />
+                    <UIControls:WpfProfileCatalog HorizontalAlignment="Left" Height="28" Margin="14,190,-7,0" VerticalAlignment="Top" Width="31" Grid.Column="4"/>
                 </Grid>
             </TabItem>
             <TabItem Header="BOLTS" Margin="13,-2,-51,0">
@@ -79,21 +80,16 @@
                     <TextBlock HorizontalAlignment="Left" Margin="94,118,0,0" TextWrapping="Wrap" Text="Cut length" VerticalAlignment="Top" RenderTransformOrigin="0.541,-0.123" Grid.Column="5"/>
                     <TextBlock HorizontalAlignment="Left" Margin="86,143,0,0" TextWrapping="Wrap" Text="Extra length" VerticalAlignment="Top" Grid.Column="5"/>
                     <ComboBox x:Name="combobox_bolttype" Grid.Column="5" HorizontalAlignment="Left" Margin="186,92,0,0" VerticalAlignment="Top" Width="120" Height="20"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="10,161,0,0" TextWrapping="Wrap" Text="Bolt group" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" Width="299" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="6"/>
-                    <TextBox x:Name="boltdistx"  HorizontalAlignment="Left" Margin="186,210,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
-                    <TextBox x:Name="boltdisty" Margin="186,233,36,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
                     <TextBox x:Name ="boltextralengthtextbox" HorizontalAlignment="Left" Margin="186,143,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="10,263,0,0" TextWrapping="Wrap" Text="Holes" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" Width="299" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="6"/>
-                    <TextBox x:Name="bolttolerancetextbox" HorizontalAlignment="Left" Margin="186,288,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,176,0,0" TextWrapping="Wrap" Text="Holes" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" Width="299" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="6"/>
+                    <TextBox x:Name="bolttolerancetextbox" HorizontalAlignment="Left" Margin="186,201,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
 
-                    <TextBox x:Name="boltslothole_x_textbox" Margin="186,334,36,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
-                    <TextBox x:Name="boltslothole_y_textbox" Margin="186,358,36,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="95,211,0,0" TextWrapping="Wrap" Text="Bolt dist X" VerticalAlignment="Top" Grid.Column="5"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="95,234,0,0" TextWrapping="Wrap" Text="Bolt dist Y" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="98,289,0,0" TextWrapping="Wrap" Text="Tolerance" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="110,313,0,0" TextWrapping="Wrap" Text="Slotted" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="74,335,0,0" TextWrapping="Wrap" Text="Slotted hole X" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="74,359,0,0" TextWrapping="Wrap" Text="Slotted hole Y" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5"/>
+                    <TextBox x:Name="boltslothole_x_textbox" Margin="186,247,36,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
+                    <TextBox x:Name="boltslothole_y_textbox" Margin="186,271,36,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="98,202,0,0" TextWrapping="Wrap" Text="Tolerance" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="110,226,0,0" TextWrapping="Wrap" Text="Slotted" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="74,248,0,0" TextWrapping="Wrap" Text="Slotted hole X" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="74,272,0,0" TextWrapping="Wrap" Text="Slotted hole Y" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5"/>
                     <UIControls:WpfBoltCatalogSize x:Name="boltcatalogsize" HorizontalAlignment="Left" Margin="186,39,0,0" VerticalAlignment="Top" Width="120" Grid.Column="5" ItemsSource="{Binding BoltSizes, ElementName=boltcatalog_standard}"/>
                     <UIControls:WpfBoltCatalogStandard x:Name="boltcatalog_standard"   HorizontalAlignment="Left" Margin="186,66,0,0" VerticalAlignment="Top" Width="120" Grid.Column="5" />
                     <CheckBox Content="CheckBox_size" x:Name="checkbox_boltsize" Grid.Column="5" HorizontalAlignment="Left" Margin="161,43,0,0" VerticalAlignment="Top" FontSize="0.01"/>
@@ -101,17 +97,15 @@
                     <CheckBox Content="CheckBox_bolttype" x:Name="checkbox_bolttype" Grid.Column="5" HorizontalAlignment="Left" Margin="161,95,0,0" VerticalAlignment="Top" FontSize="0.01"/>
                     <CheckBox Content="CheckBox_cutlength" x:Name="checkbox_cutlength" Grid.Column="5" HorizontalAlignment="Left" Margin="161,120,0,0" VerticalAlignment="Top" FontSize="0.01"/>
                     <CheckBox Content="CheckBox_extralength" x:Name="checkbox_extralength" Grid.Column="5" HorizontalAlignment="Left" Margin="161,145,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_boltdistx" x:Name="checkbox_boltdistx" Grid.Column="5" HorizontalAlignment="Left" Margin="161,212,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_boltdisty" x:Name="checkbox_boltdisty" Grid.Column="5" HorizontalAlignment="Left" Margin="161,235,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_tolerance" x:Name="checkbox_tolerance" Grid.Column="5" HorizontalAlignment="Left" Margin="161,290,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_slotted" x:Name="checkbox_slotted" Grid.Column="5" HorizontalAlignment="Left" Margin="161,314,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_slotholex" x:Name="checkbox_slotholex" Grid.Column="5" HorizontalAlignment="Left" Margin="161,336,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_slotholeY" x:Name="checkbox_slotholey" Grid.Column="5" HorizontalAlignment="Left" Margin="161,360,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_tolerance" x:Name="checkbox_tolerance" Grid.Column="5" HorizontalAlignment="Left" Margin="161,203,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_slotted" x:Name="checkbox_slotted" Grid.Column="5" HorizontalAlignment="Left" Margin="161,227,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_slotholex" x:Name="checkbox_slotholex" Grid.Column="5" HorizontalAlignment="Left" Margin="161,249,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_slotholeY" x:Name="checkbox_slotholey" Grid.Column="5" HorizontalAlignment="Left" Margin="161,273,0,0" VerticalAlignment="Top" FontSize="0.01"/>
 
 
                     <Button Grid.ColumnSpan="6" Margin="10,429,284,10" Content="Select all" Click="Button_Click_1" Width="100" Height="40" />
                     <Button Grid.Column="5" Margin="70,429,172,10" RenderTransformOrigin="0.5,0.5" Content="Unselect all" Click="Button_Click_4" Width="100" Height="40" />
-                    <ComboBox x:Name="combobox_slotted" Grid.Column="5" HorizontalAlignment="Left" Margin="186,309,0,0" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox x:Name="combobox_slotted" Grid.Column="5" HorizontalAlignment="Left" Margin="186,222,0,0" VerticalAlignment="Top" Width="120"/>
 
 
                 </Grid>
