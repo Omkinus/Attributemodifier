@@ -282,7 +282,8 @@ namespace attributemodifier
             checkbox_boltsize.IsChecked = true;
             checkbox_boltstandard.IsChecked = true;
             checkbox_bolttype.IsChecked = true;
-           
+            checkbox_plainholetype.IsChecked = true;
+            checkbox_studlength.IsChecked = true;
             checkbox_cutlength.IsChecked = true;
             checkbox_extralength.IsChecked = true;
             checkbox_slotted.IsChecked = true;
@@ -298,14 +299,15 @@ namespace attributemodifier
             checkbox_boltsize.IsChecked = false;
             checkbox_boltstandard.IsChecked = false;
             checkbox_bolttype.IsChecked = false;
-          
+            checkbox_plainholetype.IsChecked = false;
+            checkbox_studlength.IsChecked = false;
             checkbox_cutlength.IsChecked = false;
             checkbox_extralength.IsChecked = false;
             checkbox_slotted.IsChecked = false;
             checkbox_slotholex.IsChecked = false;
             checkbox_slotholey.IsChecked = false;
             checkbox_tolerance.IsChecked = false;
-            
+
         }
 
         //включить все галки на партах

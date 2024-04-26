@@ -111,7 +111,6 @@
                     <CheckBox x:Name="checkbox_plainholetype" Grid.Column="5" HorizontalAlignment="Left" Margin="162,349,0,0" VerticalAlignment="Top"/>
                     <ComboBox x:Name="combobox_plainholetype" Grid.Column="5" HorizontalAlignment="Left" Margin="187,347,0,0" VerticalAlignment="Top" Width="120" Height="20"/>
 
-
                 </Grid>
             </TabItem>
 
