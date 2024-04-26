@@ -44,6 +44,9 @@ namespace attributemodifier
             combobox_slotted.Items.Add("Oversized");
             combobox_slotted.Items.Add("Slotted");
 
+            combobox_plainholetype.Items.Add("Blind");
+            combobox_plainholetype.Items.Add("Through");
+
         }
 
         /*---------------------------------------КНОПКИ----------------------------------------------------*/
