@@ -214,6 +214,17 @@ namespace attributemodifier
                         boltgroup.SlottedHoleY = slotholey_double;
                     }
 
+                    //studlength
+
+                    if (checkbox_studlength.IsChecked == true && boltgroup.BoltStandard == "STUD")
+                    {
+                        Tekla.Structures.Datatype.Distance studlength =
+                        Tekla.Structures.Datatype.Distance.FromFractionalFeetAndInchesString(Convert.ToString(studlength_textbox.Text));
+
+                        double studlengthdouble = studlength.ConvertTo(Tekla.Structures.Datatype.Distance.UnitType.Millimeter);
+                        boltgroup.Length = studlengthdouble;
+                    }
+
                     boltgroup.Modify();
 
                 }

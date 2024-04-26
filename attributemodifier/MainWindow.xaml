@@ -81,15 +81,15 @@
                     <TextBlock HorizontalAlignment="Left" Margin="86,143,0,0" TextWrapping="Wrap" Text="Extra length" VerticalAlignment="Top" Grid.Column="5"/>
                     <ComboBox x:Name="combobox_bolttype" Grid.Column="5" HorizontalAlignment="Left" Margin="186,92,0,0" VerticalAlignment="Top" Width="120" Height="20"/>
                     <TextBox x:Name ="boltextralengthtextbox" HorizontalAlignment="Left" Margin="186,143,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="10,176,0,0" TextWrapping="Wrap" Text="Holes" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" Width="299" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="6"/>
-                    <TextBox x:Name="bolttolerancetextbox" HorizontalAlignment="Left" Margin="186,201,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="11,228,0,0" TextWrapping="Wrap" Text="Holes" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" Width="299" FontWeight="Bold" FontSize="16" Grid.ColumnSpan="6"/>
+                    <TextBox x:Name="bolttolerancetextbox" HorizontalAlignment="Left" Margin="187,253,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
 
-                    <TextBox x:Name="boltslothole_x_textbox" Margin="186,247,36,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
-                    <TextBox x:Name="boltslothole_y_textbox" Margin="186,271,36,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="98,202,0,0" TextWrapping="Wrap" Text="Tolerance" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="110,226,0,0" TextWrapping="Wrap" Text="Slotted" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="74,248,0,0" TextWrapping="Wrap" Text="Slotted hole X" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="74,272,0,0" TextWrapping="Wrap" Text="Slotted hole Y" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5"/>
+                    <TextBox x:Name="boltslothole_x_textbox" Margin="187,299,35,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
+                    <TextBox x:Name="boltslothole_y_textbox" Margin="187,323,35,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="5"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="99,254,0,0" TextWrapping="Wrap" Text="Tolerance" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="111,278,0,0" TextWrapping="Wrap" Text="Slotted" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="75,300,0,0" TextWrapping="Wrap" Text="Slotted hole X" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="75,324,0,0" TextWrapping="Wrap" Text="Slotted hole Y" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5"/>
                     <UIControls:WpfBoltCatalogSize x:Name="boltcatalogsize" HorizontalAlignment="Left" Margin="186,39,0,0" VerticalAlignment="Top" Width="120" Grid.Column="5" ItemsSource="{Binding BoltSizes, ElementName=boltcatalog_standard}"/>
                     <UIControls:WpfBoltCatalogStandard x:Name="boltcatalog_standard"   HorizontalAlignment="Left" Margin="186,66,0,0" VerticalAlignment="Top" Width="120" Grid.Column="5" />
                     <CheckBox Content="CheckBox_size" x:Name="checkbox_boltsize" Grid.Column="5" HorizontalAlignment="Left" Margin="161,43,0,0" VerticalAlignment="Top" FontSize="0.01"/>
@@ -97,15 +97,16 @@
                     <CheckBox Content="CheckBox_bolttype" x:Name="checkbox_bolttype" Grid.Column="5" HorizontalAlignment="Left" Margin="161,95,0,0" VerticalAlignment="Top" FontSize="0.01"/>
                     <CheckBox Content="CheckBox_cutlength" x:Name="checkbox_cutlength" Grid.Column="5" HorizontalAlignment="Left" Margin="161,120,0,0" VerticalAlignment="Top" FontSize="0.01"/>
                     <CheckBox Content="CheckBox_extralength" x:Name="checkbox_extralength" Grid.Column="5" HorizontalAlignment="Left" Margin="161,145,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_tolerance" x:Name="checkbox_tolerance" Grid.Column="5" HorizontalAlignment="Left" Margin="161,203,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_slotted" x:Name="checkbox_slotted" Grid.Column="5" HorizontalAlignment="Left" Margin="161,227,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_slotholex" x:Name="checkbox_slotholex" Grid.Column="5" HorizontalAlignment="Left" Margin="161,249,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-                    <CheckBox Content="CheckBox_slotholeY" x:Name="checkbox_slotholey" Grid.Column="5" HorizontalAlignment="Left" Margin="161,273,0,0" VerticalAlignment="Top" FontSize="0.01"/>
-
-
+                    <CheckBox Content="CheckBox_tolerance" x:Name="checkbox_tolerance" Grid.Column="5" HorizontalAlignment="Left" Margin="162,255,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_slotted" x:Name="checkbox_slotted" Grid.Column="5" HorizontalAlignment="Left" Margin="162,279,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_slotholex" x:Name="checkbox_slotholex" Grid.Column="5" HorizontalAlignment="Left" Margin="162,301,0,0" VerticalAlignment="Top" FontSize="0.01"/>
+                    <CheckBox Content="CheckBox_slotholeY" x:Name="checkbox_slotholey" Grid.Column="5" HorizontalAlignment="Left" Margin="162,325,0,0" VerticalAlignment="Top" FontSize="0.01"/>
                     <Button Grid.ColumnSpan="6" Margin="10,429,284,10" Content="Select all" Click="Button_Click_1" Width="100" Height="40" />
                     <Button Grid.Column="5" Margin="70,429,172,10" RenderTransformOrigin="0.5,0.5" Content="Unselect all" Click="Button_Click_4" Width="100" Height="40" />
-                    <ComboBox x:Name="combobox_slotted" Grid.Column="5" HorizontalAlignment="Left" Margin="186,222,0,0" VerticalAlignment="Top" Width="120"/>
+                    <ComboBox x:Name="combobox_slotted" Grid.Column="5" HorizontalAlignment="Left" Margin="187,274,0,0" VerticalAlignment="Top" Width="120"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="86,167,0,0" TextWrapping="Wrap" Text="Stud length" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5"/>
+                    <CheckBox x:Name="checkbox_studlength" Grid.Column="5" HorizontalAlignment="Left" Margin="161,167,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="studlength_textbox" Grid.Column="5" HorizontalAlignment="Left" Height="17" Margin="186,166,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
 
 
                 </Grid>
