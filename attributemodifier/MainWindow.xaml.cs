@@ -216,9 +216,7 @@ namespace attributemodifier
                         double slotholey_double = slotholey.ConvertTo(Tekla.Structures.Datatype.Distance.UnitType.Millimeter);
                         boltgroup.SlottedHoleY = slotholey_double;
                     }
-
                     //studlength
-
                     if (checkbox_studlength.IsChecked == true && boltgroup.BoltStandard == "STUD")
                     {
                         Tekla.Structures.Datatype.Distance studlength =
@@ -227,6 +225,20 @@ namespace attributemodifier
                         double studlengthdouble = studlength.ConvertTo(Tekla.Structures.Datatype.Distance.UnitType.Millimeter);
                         boltgroup.Length = studlengthdouble;
                     }
+                    //plain hole type
+                    if (checkbox_plainholetype.IsChecked == true && boltgroup.BoltStandard != "STUD")
+                    {
+                        switch (combobox_plainholetype.SelectedItem)
+                        {
+                            case "Blind":
+                                boltgroup.PlainHoleType = BoltGroup.BoltPlainHoleTypeEnum.HOLE_TYPE_BLIND;
+                                break;
+                            case "Through":
+                                boltgroup.PlainHoleType = BoltGroup.BoltPlainHoleTypeEnum.HOLE_TYPE_THROUGH;
+                                break;
+                        }
+                    }
+
 
                     boltgroup.Modify();
 
