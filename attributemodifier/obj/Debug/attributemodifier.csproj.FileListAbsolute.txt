@@ -113,3 +113,4 @@ D:\my repos\Attributemodifier\attributemodifier\obj\Debug\attributemodifier.appl
 D:\my repos\Attributemodifier\attributemodifier\obj\Debug\attributemodifier.csproj.CopyComplete
 D:\my repos\Attributemodifier\attributemodifier\obj\Debug\attributemodifier.exe
 D:\my repos\Attributemodifier\attributemodifier\obj\Debug\attributemodifier.pdb
+D:\my repos\Attributemodifier\attributemodifier\obj\Debug\App.baml
