@@ -342,6 +342,9 @@ namespace attributemodifier
             checkbox_boi.IsChecked = false;
         }
 
-        
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
