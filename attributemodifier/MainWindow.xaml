@@ -45,63 +45,63 @@
                     <TextBox x:Name ="Materialtextbox" Style="{StaticResource Input}" Height="25" Margin="0,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Grid.Column="3" Grid.ColumnSpan="2" FontSize="15" BorderThickness="0,0,0,1"/>
                     <TextBlock Margin="0,41,-61,0" TextWrapping="Wrap" Text="Prefix:" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" FontSize="14" Grid.ColumnSpan="2" Grid.Column="3" FontWeight="Bold" Foreground="#FF28458C"/>
                     <TextBlock HorizontalAlignment="Left" Margin="141,41,0,0" TextWrapping="Wrap" Text="Start number:" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" Width="128" FontSize="14" Grid.Column="3" Grid.ColumnSpan="2" FontWeight="Bold" Foreground="#FF28458C"/>
-                    <CheckBox  x:Name="checkbox_partstartnumber" Grid.Column="3" HorizontalAlignment="Left" Margin="117,68,0,0" VerticalAlignment="Top" FontSize="0.01">
+                    <CheckBox  x:Name="checkbox_partstartnumber" Grid.Column="3" HorizontalAlignment="Left" Margin="117,68,0,0" VerticalAlignment="Top" FontSize="0.01" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox  x:Name="checkbox_assstartnumber" Grid.Column="3" HorizontalAlignment="Left" Margin="117,103,0,0" VerticalAlignment="Top" FontSize="0.01">
+                    <CheckBox  x:Name="checkbox_assstartnumber" Grid.Column="3" HorizontalAlignment="Left" Margin="117,103,0,0" VerticalAlignment="Top" FontSize="0.01" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox  x:Name="checkbox_partprefix" HorizontalAlignment="Left" Margin="106,68,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3">
+                    <CheckBox  x:Name="checkbox_partprefix" HorizontalAlignment="Left" Margin="106,68,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox  x:Name="checkbox_assprefix" HorizontalAlignment="Left" Margin="106,103,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3">
+                    <CheckBox  x:Name="checkbox_assprefix" HorizontalAlignment="Left" Margin="106,103,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox  x:Name="checkbox_partname" HorizontalAlignment="Left" Margin="106,159,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3">
+                    <CheckBox  x:Name="checkbox_partname" HorizontalAlignment="Left" Margin="106,159,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox  x:Name="checkbox_partprofile" HorizontalAlignment="Left" Margin="106,193,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3">
+                    <CheckBox  x:Name="checkbox_partprofile" HorizontalAlignment="Left" Margin="106,193,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox  x:Name="checkbox_finish" HorizontalAlignment="Left" Margin="106,225,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3">
+                    <CheckBox  x:Name="checkbox_finish" HorizontalAlignment="Left" Margin="106,225,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox  x:Name="checkbox_material" HorizontalAlignment="Left" Margin="106,260,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3">
+                    <CheckBox  x:Name="checkbox_material" HorizontalAlignment="Left" Margin="106,260,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox  x:Name="checkbox_class" HorizontalAlignment="Left" Margin="106,293,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3">
+                    <CheckBox  x:Name="checkbox_class" HorizontalAlignment="Left" Margin="106,293,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox  x:Name="checkbox_comment"  HorizontalAlignment="Left" Margin="37,356,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.Column="3">
+                    <CheckBox  x:Name="checkbox_comment"  HorizontalAlignment="Left" Margin="37,356,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.Column="3" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox  x:Name="checkbox_boi" Margin="37,386,169,0" VerticalAlignment="Top" FontSize="0.01" Grid.Column="3" Height="16">
+                    <CheckBox  x:Name="checkbox_boi" Margin="37,386,169,0" VerticalAlignment="Top" FontSize="0.01" Grid.Column="3" Height="16" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
 
-                    <Button Margin="10,428,2,11" Style="{StaticResource hover}" Content="Select all" Click="Button_Click_2"  BorderThickness="2" Width="100" Height="40.1" RenderTransformOrigin="0.36,0.374" Background="White" BorderBrush="#FF28458C" Foreground="#FF28458C" FontWeight="Bold" FontSize="16" />
+                    <Button Margin="8,428,4,11"  Content="Select all" Click="Button_Click_2"  BorderThickness="2" Width="100" Height="40.1" RenderTransformOrigin="0.36,0.374" Background="White" BorderBrush="#FF28458C" Foreground="#FF28458C" FontWeight="Bold" FontSize="16" />
                     <Button Margin="2,428,134,11" RenderTransformOrigin="0.5,0.5" Content="Unselect all" BorderThickness="2" Grid.Column="2" Width="100" Height="40" Grid.ColumnSpan="2" Click="Button_Click_5" BorderBrush="#FF28458C" Background="White" Foreground="#FF28458C" FontWeight="Bold" FontSize="16" />
                     <UIControls:WpfProfileCatalog HorizontalAlignment="Left" Height="28" Margin="77,192,0,0" VerticalAlignment="Top" Width="31"/>
                 </Grid>
@@ -136,47 +136,47 @@
                     <TextBlock HorizontalAlignment="Left" Margin="57,343,0,0" TextWrapping="Wrap" Text="Slotted hole Y" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5" FontSize="14" FontWeight="Bold" Foreground="#FF28458C"/>
                     <UIControls:WpfBoltCatalogSize x:Name="boltcatalogsize" HorizontalAlignment="Left" Margin="187,39,0,0" VerticalAlignment="Top" Width="120" Grid.Column="5" ItemsSource="{Binding BoltSizes, ElementName=boltcatalog_standard}" FontSize="14" Height="25"/>
                     <UIControls:WpfBoltCatalogStandard x:Name="boltcatalog_standard"   HorizontalAlignment="Left" Margin="187,69,0,0" VerticalAlignment="Top" Width="120" Grid.Column="5" FontSize="14" Height="25" />
-                    <CheckBox  x:Name="checkbox_boltsize" Grid.Column="5" HorizontalAlignment="Left" Margin="161,44,0,0" VerticalAlignment="Top" FontSize="0.01">
+                    <CheckBox  x:Name="checkbox_boltsize" Grid.Column="5" HorizontalAlignment="Center" Margin="0,44,0,0" VerticalAlignment="Top" FontSize="0.01" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox  x:Name="checkbox_boltstandard" Grid.Column="5" HorizontalAlignment="Left" Margin="161,74,0,0" VerticalAlignment="Top" FontSize="0.01">
+                    <CheckBox  x:Name="checkbox_boltstandard" Grid.Column="5" HorizontalAlignment="Center" Margin="0,73,0,0" VerticalAlignment="Top" FontSize="0.01" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox  x:Name="checkbox_bolttype" Grid.Column="5" HorizontalAlignment="Center" Margin="0,103,0,0" VerticalAlignment="Top" FontSize="0.01" Width="16" Height="16">
+                    <CheckBox  x:Name="checkbox_bolttype" Grid.Column="5" HorizontalAlignment="Center" Margin="0,103,0,0" VerticalAlignment="Top" FontSize="0.01" Width="16" Height="16" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox  x:Name="checkbox_cutlength" Grid.Column="5" HorizontalAlignment="Left" Margin="161,133,0,0" VerticalAlignment="Top" FontSize="0.01">
+                    <CheckBox  x:Name="checkbox_cutlength" Grid.Column="5" HorizontalAlignment="Center" Margin="0,133,0,0" VerticalAlignment="Top" FontSize="0.01" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox  x:Name="checkbox_extralength" Grid.Column="5" HorizontalAlignment="Left" Margin="161,164,0,0" VerticalAlignment="Top" FontSize="0.01">
+                    <CheckBox  x:Name="checkbox_extralength" Grid.Column="5" HorizontalAlignment="Center" Margin="0,164,0,0" VerticalAlignment="Top" FontSize="0.01" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox  x:Name="checkbox_tolerance" Grid.Column="5" HorizontalAlignment="Center" Margin="0,254,0,0" VerticalAlignment="Top" FontSize="0.01">
+                    <CheckBox  x:Name="checkbox_tolerance" Grid.Column="5" HorizontalAlignment="Center" Margin="0,254,0,0" VerticalAlignment="Top" FontSize="0.01" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox  x:Name="checkbox_slotted" Grid.Column="5" HorizontalAlignment="Left" Margin="161,285,0,0" VerticalAlignment="Top" FontSize="0.01">
+                    <CheckBox  x:Name="checkbox_slotted" Grid.Column="5" HorizontalAlignment="Center" Margin="0,284,0,0" VerticalAlignment="Top" FontSize="0.01" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox  x:Name="checkbox_slotholex" Grid.Column="5" HorizontalAlignment="Center" Margin="0,315,0,0" VerticalAlignment="Top" FontSize="0.01">
+                    <CheckBox  x:Name="checkbox_slotholex" Grid.Column="5" HorizontalAlignment="Center" Margin="0,314,0,0" VerticalAlignment="Top" FontSize="0.01" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox  x:Name="checkbox_slotholey" Grid.Column="5" HorizontalAlignment="Center" Margin="0,344,0,0" VerticalAlignment="Top" FontSize="0.01" Width="16" Height="16">
+                    <CheckBox  x:Name="checkbox_slotholey" Grid.Column="5" HorizontalAlignment="Center" Margin="0,343,0,0" VerticalAlignment="Top" FontSize="0.01" Width="16" Height="16" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
@@ -185,7 +185,7 @@
                     <Button Grid.Column="5" Margin="70,428,172,11" RenderTransformOrigin="0.5,0.5" Content="Unselect all" BorderThickness="2" Click="Button_Click_4" Width="100" Height="40" Foreground="#FF28458C" BorderBrush="#FF28458C" Background="White" FontWeight="Bold" FontSize="16" />
                     <ComboBox x:Name="combobox_slotted" Grid.Column="5" HorizontalAlignment="Left" Margin="187,280,0,0" VerticalAlignment="Top" Width="120" Height="25" FontSize="14"/>
                     <TextBlock HorizontalAlignment="Left" Margin="73,192,0,0" TextWrapping="Wrap" Text="Stud length" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5" FontSize="14" FontWeight="Bold" Foreground="#FF28458C"/>
-                    <CheckBox x:Name="checkbox_studlength" Grid.Column="5" HorizontalAlignment="Center" Margin="0,193,0,0" VerticalAlignment="Top">
+                    <CheckBox x:Name="checkbox_studlength" Grid.Column="5" HorizontalAlignment="Center" Margin="0,193,0,0" VerticalAlignment="Top" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
@@ -194,7 +194,7 @@
                     <TextBlock HorizontalAlignment="Left" Margin="52,373,0,0" TextWrapping="Wrap" Text="Plain hole type" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5" FontSize="14" FontWeight="Bold" Foreground="#FF28458C"/>
 
 
-                    <CheckBox x:Name="checkbox_plainholetype"  Grid.Column="5" HorizontalAlignment="Center" Margin="0,374,0,0" VerticalAlignment="Top" Width="16" Height="16">
+                    <CheckBox x:Name="checkbox_plainholetype"  Grid.Column="5" HorizontalAlignment="Center" Margin="0,374,0,0" VerticalAlignment="Top" Width="16" Height="16" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
