@@ -75,7 +75,7 @@
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <CheckBox  x:Name="checkbox_finish" HorizontalAlignment="Left" Margin="106,225,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3" BorderBrush="#FF052061">
+                    <CheckBox  x:Name="checkbox_finish" HorizontalAlignment="Left" Margin="106,226,0,0" VerticalAlignment="Top" FontSize="0.01" Grid.ColumnSpan="3" BorderBrush="#FF052061">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
@@ -103,7 +103,9 @@
 
                     <Button Margin="8,428,4,11"  Content="Select all" Click="Button_Click_2"  BorderThickness="2" Width="100" Height="40.1" RenderTransformOrigin="0.36,0.374" Background="White" BorderBrush="#FF28458C" Foreground="#FF28458C" FontWeight="Bold" FontSize="16" />
                     <Button Margin="2,428,134,11" RenderTransformOrigin="0.5,0.5" Content="Unselect all" BorderThickness="2" Grid.Column="2" Width="100" Height="40" Grid.ColumnSpan="2" Click="Button_Click_5" BorderBrush="#FF28458C" Background="White" Foreground="#FF28458C" FontWeight="Bold" FontSize="16" />
-                    <UIControls:WpfProfileCatalog HorizontalAlignment="Left" Height="28" Margin="77,192,0,0" VerticalAlignment="Top" Width="31"/>
+                    <UIControls:WpfProfileCatalog x:Name="profiles" HorizontalAlignment="Left" Height="28" Margin="77,191,0,0" VerticalAlignment="Top" Width="31"/>
+                    <UIControls:WpfMaterialCatalog HorizontalAlignment="Left" Height="22" Margin="77,258,0,0" VerticalAlignment="Top" Width="25"/>
+
                 </Grid>
             </TabItem>
             <TabItem Header="BOLTS" Margin="13,-2,-51,0">

@@ -46,6 +46,9 @@ namespace attributemodifier
 
             combobox_plainholetype.Items.Add("Blind");
             combobox_plainholetype.Items.Add("Through");
+            
+            profiles.InitializeComponent();
+            
 
         }
 
@@ -54,8 +57,8 @@ namespace attributemodifier
         {
             tsm.Model _model = new tsm.Model();
             DrawingHandler _drawinghandler = new DrawingHandler();
-           
-
+          
+            
             if (!_model.GetConnectionStatus() || !_drawinghandler.GetConnectionStatus())
             {
                 MessageBox.Show("ВКЛЮЧИ ТЕКЛУ");
