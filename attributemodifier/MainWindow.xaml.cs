@@ -17,6 +17,8 @@ using tsm = Tekla.Structures.Model;
 using Tekla.Structures.Drawing.UI;
 using Tekla.Structures.Dialog.UIControls;
 using Tekla.Structures.Model;
+using Tekla.Structures.Catalogs;
+using Tekla.Structures.CatalogInternal;
 using static Tekla.Structures.Model.ReferenceModel;
 using static Tekla.Structures.Drawing.StraightDimensionSet;
 using Tekla.Structures.Model.UI;
@@ -33,6 +35,8 @@ namespace attributemodifier
         public MainWindow()
         {
             InitializeComponent();
+            profiles.InitializeComponent();
+
             this.MouseDown += delegate { DragMove(); };
 
             Tekla.Structures.Datatype.Distance.CurrentUnitType = Tekla.Structures.Datatype.Distance.UnitType.Inch;
@@ -46,8 +50,9 @@ namespace attributemodifier
 
             combobox_plainholetype.Items.Add("Blind");
             combobox_plainholetype.Items.Add("Through");
-            
-            profiles.InitializeComponent();
+
+            CatalogHandler catalog = new CatalogHandler();
+            catalog.GetLibraryProfileItems();
             
 
         }
@@ -57,8 +62,10 @@ namespace attributemodifier
         {
             tsm.Model _model = new tsm.Model();
             DrawingHandler _drawinghandler = new DrawingHandler();
-          
+
             
+
+         
             if (!_model.GetConnectionStatus() || !_drawinghandler.GetConnectionStatus())
             {
                 MessageBox.Show("ВКЛЮЧИ ТЕКЛУ");
@@ -348,6 +355,12 @@ namespace attributemodifier
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void profiles_Loaded(object sender, RoutedEventArgs e)
+        {
+            profiles.InitializeComponent();
+            
         }
     }
 }
