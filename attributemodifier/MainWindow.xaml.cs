@@ -1,29 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using Tekla.Structures.Drawing;
 using tsm = Tekla.Structures.Model;
 using Tekla.Structures.Drawing.UI;
 using Tekla.Structures.Dialog.UIControls;
 using Tekla.Structures.Model;
 using Tekla.Structures.Catalogs;
-using Tekla.Structures.CatalogInternal;
-using static Tekla.Structures.Model.ReferenceModel;
-using static Tekla.Structures.Drawing.StraightDimensionSet;
-using Tekla.Structures.Model.UI;
-using System.Collections;
-using System.Globalization;
+
 
 namespace attributemodifier
 {
@@ -32,10 +17,39 @@ namespace attributemodifier
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly List<ProfileItem> SteelProfiles;
+        private readonly List<MaterialItem> SteelMaterials;
+
         public MainWindow()
         {
             InitializeComponent();
-            profiles.InitializeComponent();
+
+            tsm.Model _model = new tsm.Model();
+
+            SteelProfiles = new List<ProfileItem>();
+            SteelMaterials = new List<MaterialItem>();
+
+            CatalogHandler catalog = new CatalogHandler();
+
+            ProfileItemEnumerator profileItemEnumerator = catalog.GetProfileItems();
+
+            while (profileItemEnumerator.MoveNext())
+            {
+                ProfileItem Item = profileItemEnumerator.Current;
+                SteelProfiles.Add(Item);
+
+            }
+
+            MaterialItemEnumerator materialItemEnumerator = catalog.GetMaterialItems();
+
+            while (materialItemEnumerator.MoveNext())
+            {
+                MaterialItem item = materialItemEnumerator.Current;
+                SteelMaterials.Add(item);
+            }
+
+          
+
 
             this.MouseDown += delegate { DragMove(); };
 
@@ -51,9 +65,7 @@ namespace attributemodifier
             combobox_plainholetype.Items.Add("Blind");
             combobox_plainholetype.Items.Add("Through");
 
-            CatalogHandler catalog = new CatalogHandler();
-            catalog.GetLibraryProfileItems();
-            
+
 
         }
 
@@ -63,9 +75,9 @@ namespace attributemodifier
             tsm.Model _model = new tsm.Model();
             DrawingHandler _drawinghandler = new DrawingHandler();
 
-            
 
-         
+
+
             if (!_model.GetConnectionStatus() || !_drawinghandler.GetConnectionStatus())
             {
                 MessageBox.Show("ВКЛЮЧИ ТЕКЛУ");
@@ -155,7 +167,7 @@ namespace attributemodifier
                         boltgroup.BoltSize = Convert.ToDouble(boltcatalogsize.Text);
                     }
                     //bolt type
-                    if (checkbox_bolttype.IsChecked == true) 
+                    if (checkbox_bolttype.IsChecked == true)
                     {
                         switch (combobox_bolttype.SelectedItem)
                         {
@@ -168,9 +180,9 @@ namespace attributemodifier
                         }
                     }
                     //bolt cutlength
-                    if (checkbox_cutlength.IsChecked == true) 
+                    if (checkbox_cutlength.IsChecked == true)
                     {
-                        Tekla.Structures.Datatype.Distance cutlengthdistance = 
+                        Tekla.Structures.Datatype.Distance cutlengthdistance =
                             Tekla.Structures.Datatype.Distance.FromFractionalFeetAndInchesString(Convert.ToString(boltcutlengthtextbox.Text));
 
                         double cutlengthdistancedouble = cutlengthdistance.ConvertTo(Tekla.Structures.Datatype.Distance.UnitType.Millimeter);
@@ -300,7 +312,7 @@ namespace attributemodifier
             checkbox_slotholex.IsChecked = true;
             checkbox_slotholey.IsChecked = true;
             checkbox_tolerance.IsChecked = true;
-            
+
         }
 
         //выключить все галки на болтах
@@ -352,14 +364,12 @@ namespace attributemodifier
             checkbox_boi.IsChecked = false;
         }
 
-        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Button_Click_6(object sender, RoutedEventArgs e)
         {
+            MaterialSelectionForm SelectionForm = new MaterialSelectionForm(SteelMaterials, "");
 
-        }
+            SelectionForm.ShowDialog();
 
-        private void profiles_Loaded(object sender, RoutedEventArgs e)
-        {
-            profiles.InitializeComponent();
             
         }
     }

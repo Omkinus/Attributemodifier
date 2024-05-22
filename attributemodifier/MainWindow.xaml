@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:attributemodifier"
-        xmlns:UIControls="clr-namespace:Tekla.Structures.Dialog.UIControls;assembly=Tekla.Structures.Dialog" x:Class="attributemodifier.MainWindow"
+        xmlns:UIControls="clr-namespace:Tekla.Structures.Dialog.UIControls;assembly=Tekla.Structures.Dialog" xmlns:Catalogs="clr-namespace:Tekla.Structures.Catalogs;assembly=Tekla.Structures.Catalogs" x:Class="attributemodifier.MainWindow"
         mc:Ignorable="d"
         Title="Attribute modifier" Height="508.667" Width="400" Background="White" Foreground="Black"   ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStyle="None" WindowStartupLocation="CenterOwner">
     <Grid Margin="0,0,0,69" RenderTransformOrigin="0.492,1.002">
@@ -27,7 +27,7 @@
                     <TextBox x:Name ="Nametextbox" Style="{StaticResource Input}" Height="25" Margin="0,156,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Grid.Column="3" Grid.ColumnSpan="3" FontSize="15" SelectionBrush="#FF004AFF" BorderThickness="0,0,0,1"/>
                     <TextBox x:Name ="Profiletextbox" Style="{StaticResource Input}" Height="25" Margin="0,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Grid.Column="3" Grid.ColumnSpan="3" FontSize="15" BorderThickness="0,0,0,1"/>
                     <TextBox x:Name ="Finishtextbox" Style="{StaticResource Input}" Height="25" Margin="0,224,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Grid.Column="3"  Grid.ColumnSpan="3" FontSize="15" BorderThickness="0,0,0,1"/>
-                    <TextBlock HorizontalAlignment="Left" Margin="10,129,0,0" TextWrapping="Wrap" Text="Attributes" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" FontWeight="Bold" FontSize="17" Width="178" Grid.ColumnSpan="5" Foreground="#FF052061"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="10,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" FontWeight="Bold" FontSize="17" Width="178" Grid.ColumnSpan="5" Foreground="#FF052061"><Run Text="Attributes"/></TextBlock>
                     <TextBlock HorizontalAlignment="Left" Margin="10,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="54" RenderTransformOrigin="0.944,6.375" Text="Class" FontSize="14" FontWeight="Bold" Foreground="#FF28458C"/>
                     <TextBox x:Name ="Classtextbox" Style="{StaticResource Input}" Height="25" Margin="0,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" TextChanged="TextBox_TextChanged" HorizontalAlignment="Left" Grid.Column="3" Grid.ColumnSpan="3" FontSize="15" BorderThickness="0,0,0,1"/>
                     <TextBlock HorizontalAlignment="Left" Margin="10,320,0,0" TextWrapping="Wrap" Text="User-defined attributes" VerticalAlignment="Top" RenderTransformOrigin="-0.481,1.375" FontWeight="Bold" FontSize="17" Width="229" Grid.ColumnSpan="5" Foreground="#FF052061"/>
@@ -104,8 +104,9 @@
 
                     <Button Margin="8,428,4,11"  Content="Select all" Click="Button_Click_2"  BorderThickness="2" Width="100" Height="40.1" RenderTransformOrigin="0.36,0.374" Background="White" BorderBrush="#FF28458C" Foreground="#FF28458C" FontWeight="Bold" FontSize="16" />
                     <Button Margin="2,428,134,11" RenderTransformOrigin="0.5,0.5" Content="Unselect all" BorderThickness="2" Grid.Column="2" Width="100" Height="40" Grid.ColumnSpan="3" Click="Button_Click_5" BorderBrush="#FF28458C" Background="White" Foreground="#FF28458C" FontWeight="Bold" FontSize="16" />
-                    <UIControls:WpfProfileCatalog  x:Name="profiles" HorizontalAlignment="Left" Height="28" Margin="77,191,0,0" VerticalAlignment="Top" Width="31" Loaded="profiles_Loaded"/>
-                    <UIControls:WpfMaterialCatalog HorizontalAlignment="Left" Height="22" Margin="77,258,0,0" VerticalAlignment="Top" Width="25"/>
+                    <UIControls:WpfProfileCatalog  x:Name="profiles" HorizontalAlignment="Left" Height="28" Margin="77,191,0,0" VerticalAlignment="Top" Width="31" />
+                    <UIControls:WpfMaterialCatalog  x:Name="materials" HorizontalAlignment="Left" Height="22" Margin="77,258,0,0" VerticalAlignment="Top" Width="25" Cursor="None"  />
+                    <Button Content="Button" Grid.Column="4" HorizontalAlignment="Left" Margin="0,129,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_6"/>
 
                 </Grid>
             </TabItem>
