@@ -17,7 +17,8 @@ namespace attributemodifier
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly List<ProfileItem> SteelProfiles;
+        private readonly List<LibraryProfileItem> SteelProfiles;
+        private readonly List<ParametricProfileItem> ParametricSteelProfiles;
         private readonly List<MaterialItem> SteelMaterials;
 
         public MainWindow()
@@ -26,29 +27,33 @@ namespace attributemodifier
 
             tsm.Model _model = new tsm.Model();
 
-            SteelProfiles = new List<ProfileItem>();
+            SteelProfiles = new List<LibraryProfileItem>();
+            ParametricSteelProfiles = new List<ParametricProfileItem>();
             SteelMaterials = new List<MaterialItem>();
 
             CatalogHandler catalog = new CatalogHandler();
-
-            ProfileItemEnumerator profileItemEnumerator = catalog.GetProfileItems();
-
-            while (profileItemEnumerator.MoveNext())
-            {
-                ProfileItem Item = profileItemEnumerator.Current;
-                SteelProfiles.Add(Item);
-
-            }
-
+            
             MaterialItemEnumerator materialItemEnumerator = catalog.GetMaterialItems();
-
             while (materialItemEnumerator.MoveNext())
             {
                 MaterialItem item = materialItemEnumerator.Current;
                 SteelMaterials.Add(item);
             }
 
-          
+            ProfileItemEnumerator profileItemEnumerator = catalog.GetLibraryProfileItems();
+            while (profileItemEnumerator.MoveNext()) {
+
+                var item = profileItemEnumerator.Current as LibraryProfileItem;
+                SteelProfiles.Add(item);
+            }
+
+            ProfileItemEnumerator parametricprofileItemEnumerator = catalog.GetParametricProfileItems();
+            while (parametricprofileItemEnumerator.MoveNext())
+            {
+
+                var item = parametricprofileItemEnumerator.Current as ParametricProfileItem;
+                ParametricSteelProfiles.Add(item);
+            }
 
 
             this.MouseDown += delegate { DragMove(); };
@@ -371,6 +376,16 @@ namespace attributemodifier
             SelectionForm.ShowDialog();
 
                 Materialtextbox.Text = SelectionForm.SelectedMaterial;
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            
+            ProfileSelectionForm SelectionForm = new ProfileSelectionForm(SteelProfiles, ParametricSteelProfiles);
+
+            SelectionForm.ShowDialog();
+
+            Profiletextbox.Text = SelectionForm.SelectedProfile;
         }
     }
 }

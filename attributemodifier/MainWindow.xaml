@@ -104,7 +104,8 @@
 
                     <Button Margin="8,428,4,11"  Content="Select all" Click="Button_Click_2"  BorderThickness="2" Width="100" Height="40.1" RenderTransformOrigin="0.36,0.374" Background="White" BorderBrush="#FF28458C" Foreground="#FF28458C" FontWeight="Bold" FontSize="16" />
                     <Button Margin="2,428,134,11" RenderTransformOrigin="0.5,0.5" Content="Unselect all" BorderThickness="2" Grid.Column="2" Width="100" Height="40" Grid.ColumnSpan="3" Click="Button_Click_5" BorderBrush="#FF28458C" Background="White" Foreground="#FF28458C" FontWeight="Bold" FontSize="16" />
-                    <Button Content="..." HorizontalAlignment="Left" BorderThickness="1" Margin="74,258,0,0" VerticalAlignment="Top" Width="23" Click="Button_Click_6" Height="23" BorderBrush="#FF0B1A40" Background="White" FontWeight="Bold" RenderTransformOrigin="0.543,0.754"/>
+                    <Button Content="..." HorizontalAlignment="Left" BorderThickness="1" Margin="74,258,0,0" VerticalAlignment="Top" Width="23" Click="Button_Click_6" Height="23" BorderBrush="#FF0B1A40" Background="White" RenderTransformOrigin="0.543,0.754"/>
+                    <Button Content="..." HorizontalAlignment="Left" Margin="74,190,0,0" VerticalAlignment="Top" Width="23" Height="23" Foreground="#FF0B1A40" BorderBrush="#FF0B1A40" Background="White" FontSize="14" RenderTransformOrigin="0.942,0.739" Click="Button_Click_7"/>
 
                 </Grid>
             </TabItem>
