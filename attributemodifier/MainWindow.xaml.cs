@@ -370,7 +370,7 @@ namespace attributemodifier
 
             SelectionForm.ShowDialog();
 
-            
+                Materialtextbox.Text = SelectionForm.SelectedMaterial;
         }
     }
 }

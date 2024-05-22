@@ -104,9 +104,7 @@
 
                     <Button Margin="8,428,4,11"  Content="Select all" Click="Button_Click_2"  BorderThickness="2" Width="100" Height="40.1" RenderTransformOrigin="0.36,0.374" Background="White" BorderBrush="#FF28458C" Foreground="#FF28458C" FontWeight="Bold" FontSize="16" />
                     <Button Margin="2,428,134,11" RenderTransformOrigin="0.5,0.5" Content="Unselect all" BorderThickness="2" Grid.Column="2" Width="100" Height="40" Grid.ColumnSpan="3" Click="Button_Click_5" BorderBrush="#FF28458C" Background="White" Foreground="#FF28458C" FontWeight="Bold" FontSize="16" />
-                    <UIControls:WpfProfileCatalog  x:Name="profiles" HorizontalAlignment="Left" Height="28" Margin="77,191,0,0" VerticalAlignment="Top" Width="31" />
-                    <UIControls:WpfMaterialCatalog  x:Name="materials" HorizontalAlignment="Left" Height="22" Margin="77,258,0,0" VerticalAlignment="Top" Width="25" Cursor="None"  />
-                    <Button Content="Button" Grid.Column="4" HorizontalAlignment="Left" Margin="0,129,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_6"/>
+                    <Button Content="..." HorizontalAlignment="Left" BorderThickness="1" Margin="74,258,0,0" VerticalAlignment="Top" Width="23" Click="Button_Click_6" Height="23" BorderBrush="#FF0B1A40" Background="White" FontWeight="Bold" RenderTransformOrigin="0.543,0.754"/>
 
                 </Grid>
             </TabItem>
