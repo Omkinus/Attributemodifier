@@ -382,7 +382,7 @@ namespace attributemodifier
         {
             
             ProfileSelectionForm SelectionForm = new ProfileSelectionForm(SteelProfiles, ParametricSteelProfiles);
-
+           
             SelectionForm.ShowDialog();
 
             Profiletextbox.Text = SelectionForm.SelectedProfile;
