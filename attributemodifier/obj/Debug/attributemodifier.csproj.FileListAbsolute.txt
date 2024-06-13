@@ -28,7 +28,6 @@ C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\obj\Debug\attrib
 C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\obj\Debug\attributemodifier.csproj.CopyComplete
 C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\obj\Debug\attributemodifier.exe
 C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\obj\Debug\attributemodifier.pdb
-C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\obj\Debug\attributemodifier.csprojAssemblyReference.cache
 C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\bin\Debug\attributemodifier.exe.manifest
 C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\bin\Debug\attributemodifier.application
 C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\obj\Debug\attributemodifier.exe.manifest
