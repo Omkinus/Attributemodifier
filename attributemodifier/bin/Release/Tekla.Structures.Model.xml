@@ -9051,11 +9051,6 @@
             Spiral beam total rise is zero and rotation angle more than 360 degrees.
             </summary>
         </member>
-        <member name="F:Tekla.Structures.Model.Messages.SpiralBeamRotationAngleIs0Degrees">
-            <summary>
-            Spiral beam rotation angle is 0 degrees.
-            </summary>
-        </member>
         <member name="T:Tekla.Structures.Model.NumberingSeries">
             <summary>
             The NumberingSeries class describes how an object is to be numbered.
@@ -15827,11 +15822,6 @@
         <member name="F:Tekla.Structures.Model.SpiralBeam.ErrorStatus.ZeroTotalRiseWithMore360Degrees">
             <summary>
             Status when total rise is zero and rotation angle more than 360 degrees.
-            </summary>
-        </member>
-        <member name="F:Tekla.Structures.Model.SpiralBeam.ErrorStatus.RotationAngleIs0Degrees">
-            <summary>
-            Status when rotation angle is 0 degrees.
             </summary>
         </member>
         <member name="T:Tekla.Structures.Model.PolymeshEnumerator">
@@ -25901,12 +25891,6 @@
         <member name="M:Tekla.Structures.ModelInternal.BuildingSpaces.Space.Select">
             <inheritdoc/>
         </member>
-        <member name="M:Tekla.Structures.ModelInternal.BuildingSpaces.Space.GetSolid">
-            <summary>
-            Returns the solid of the space.
-            </summary>
-            <returns>The solid of the space.</returns>
-        </member>
         <member name="M:Tekla.Structures.ModelInternal.BuildingSpaces.Space.Draw">
             <summary>
             Renders the space into view.
@@ -29537,7 +29521,7 @@
             <param name="BasePointGuid">The base point guid if base point used, otherwise empty string.</param>
             <returns>True, if success.</returns>
         </member>
-        <member name="M:Tekla.Structures.ModelInternal.Operation.ExportModel(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+        <member name="M:Tekla.Structures.ModelInternal.Operation.ExportModel(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
             <summary>
             Exports TS model to file.
             </summary>
@@ -29558,7 +29542,6 @@
             <param name="grids"></param>
             <param name="spatialHierarchy"></param>
             <param name="pours"></param>
-            <param name="onlyProperties"></param>
             <returns>True, if success.</returns>
         </member>
         <member name="M:Tekla.Structures.ModelInternal.Operation.ExportIFCFromSelected(System.String,System.String,Tekla.Structures.Model.Operations.Operation.IFCExportViewTypeEnum,System.Collections.Generic.List{System.String},Tekla.Structures.Model.Operations.Operation.ExportBasePoint,System.String,System.String,Tekla.Structures.Model.Operations.Operation.IFCExportFlags,System.Boolean,System.Boolean,System.String)">
@@ -30395,14 +30378,13 @@
             <param name="profile">The profile to be checked.</param>
             <returns>True if a part can be created directly using that profile, otherwise false.</returns>
         </member>
-        <member name="M:Tekla.Structures.ModelInternal.Operation.ImportBuildingHierarchyDataFromReferenceModel(System.String,System.Int32,System.Boolean)">
+        <member name="M:Tekla.Structures.ModelInternal.Operation.ImportBuildingHierarchyDataFromReferenceModel(System.String,System.Int32)">
             <summary>
             Imports the given reference models building hierarchy data. If reference model file is provided, gets
             data from the file. If reference model id is given, the data is retrieved from that, and file is then ignored.
             </summary>
             <param name="referenceModelFile">The reference model (TrimBIM) file name and path.</param>
             <param name="referenceModelId">The reference model id.</param>
-            <param name="includeSpaces">True if spaces should be included in the import, False otherwise.</param>
             <returns>True if anything imported from reference model, otherwise false.</returns>
         </member>
         <member name="M:Tekla.Structures.ModelInternal.Operation.AbsoluteFilePath(System.String,Tekla.Structures.ModelInternal.Operation.MacroLocationEnum)">
@@ -31401,11 +31383,6 @@
             <summary>Fix attribute types.
             The deserializer makes some undesired in output type. Fix them.</summary>
             <param name="attributes">The UDA dictionary to fix. It's modified inplace.</param>
-        </member>
-        <member name="M:Tekla.Structures.ModelInternal.Serializer.FixHexes(System.String)">
-            <summary>Fix corrupted json which may encode integers as hexadecimals.</summary>
-            <param name="json">The suspicous json text.</param>
-            <returns>The fixed json text.</returns>
         </member>
         <member name="T:Tekla.Structures.ModelInternal.UDAChanges">
             <summary>UDA changes for an object.</summary>
@@ -36841,13 +36818,12 @@
             <param name="aProfile">The profile.</param>
             <returns></returns>
         </member>
-        <member name="M:Tekla.Structures.ModelInternal.CDelegateWrapper.ImportBuildingHierarchyDataFromReferenceModel(System.String,System.Int32,System.Boolean)">
+        <member name="M:Tekla.Structures.ModelInternal.CDelegateWrapper.ImportBuildingHierarchyDataFromReferenceModel(System.String,System.Int32)">
             <summary>
             DO NOT USE! For internal usage only!
             </summary>
             <param name="aReferenceModelFile">The reference model file.</param>
             <param name="referenceModelId">The reference model id.</param>
-            <param name="includeSpaces">True if spaces should be included in the import, False otherwise.</param>
             <returns></returns>
         </member>
         <member name="M:Tekla.Structures.ModelInternal.CDelegateWrapper.ImportSemantic(System.String,System.String)">
@@ -36858,7 +36834,7 @@
             <param name="aBasePointGuid"></param>
             <returns></returns>
         </member>
-        <member name="M:Tekla.Structures.ModelInternal.CDelegateWrapper.ExportModel(System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:Tekla.Structures.ModelInternal.CDelegateWrapper.ExportModel(System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
             DO NOT USE! For internal usage only!
             </summary>
@@ -36879,7 +36855,6 @@
             <param name="grids"></param>
             <param name="spatialHierarchy"></param>
             <param name="pours"></param>
-            <param name="onlyProperties"></param>
             <returns></returns>
         </member>
         <member name="M:Tekla.Structures.ModelInternal.CDelegateWrapper.ExportCreateIFC(Tekla.Structures.ModelInternal.dotCreateIFCFromModel_t@)">
@@ -40410,13 +40385,12 @@
             <param name="aProfile"></param>
             <returns></returns>
         </member>
-        <member name="M:Tekla.Structures.ModelInternal.ICDelegate.ImportBuildingHierarchyDataFromReferenceModel(System.String,System.Int32,System.Boolean)">
+        <member name="M:Tekla.Structures.ModelInternal.ICDelegate.ImportBuildingHierarchyDataFromReferenceModel(System.String,System.Int32)">
             <summary>
             DO NOT USE! For internal usage only!
             </summary>
             <param name="aReferenceModelFile"></param>
-            <param name="referenceModelId"></param>'
-            <param name="includeSpaces"></param>
+            <param name="referenceModelId"></param>
             <returns></returns>
         </member>
         <member name="M:Tekla.Structures.ModelInternal.ICDelegate.ImportSemantic(System.String,System.String)">
@@ -40427,7 +40401,7 @@
             <param name="aBasePointGuid"></param>
             <returns></returns>
         </member>
-        <member name="M:Tekla.Structures.ModelInternal.ICDelegate.ExportModel(System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+        <member name="M:Tekla.Structures.ModelInternal.ICDelegate.ExportModel(System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
             <summary>
             DO NOT USE! For internal usage only!
             </summary>
@@ -40448,7 +40422,6 @@
             <param name="grids"></param>
             <param name="spatialHierarchy"></param>
             <param name="pours"></param>
-            <param name="onlyProperties"></param>
         </member>
         <member name="M:Tekla.Structures.ModelInternal.ICDelegate.ExportCreateIFC(Tekla.Structures.ModelInternal.dotCreateIFCFromModel_t@)">
             <summary>

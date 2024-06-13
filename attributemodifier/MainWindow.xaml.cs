@@ -17,9 +17,9 @@ namespace attributemodifier
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly List<LibraryProfileItem> SteelProfiles;
-        private readonly List<ParametricProfileItem> ParametricSteelProfiles;
-        private readonly List<MaterialItem> SteelMaterials;
+        public List<LibraryProfileItem> SteelProfiles;
+        public List<ParametricProfileItem> ParametricSteelProfiles;
+        public List<MaterialItem> SteelMaterials;
 
         public MainWindow()
         {
@@ -30,30 +30,25 @@ namespace attributemodifier
             SteelProfiles = new List<LibraryProfileItem>();
             ParametricSteelProfiles = new List<ParametricProfileItem>();
             SteelMaterials = new List<MaterialItem>();
-
+            
             CatalogHandler catalog = new CatalogHandler();
             
             MaterialItemEnumerator materialItemEnumerator = catalog.GetMaterialItems();
             while (materialItemEnumerator.MoveNext())
             {
                 MaterialItem item = materialItemEnumerator.Current;
+                
                 SteelMaterials.Add(item);
             }
 
             ProfileItemEnumerator profileItemEnumerator = catalog.GetLibraryProfileItems();
-            while (profileItemEnumerator.MoveNext()) {
-
+            while (profileItemEnumerator.MoveNext()) {              
                 var item = profileItemEnumerator.Current as LibraryProfileItem;
+            
                 SteelProfiles.Add(item);
             }
 
-            ProfileItemEnumerator parametricprofileItemEnumerator = catalog.GetParametricProfileItems();
-            while (parametricprofileItemEnumerator.MoveNext())
-            {
 
-                var item = parametricprofileItemEnumerator.Current as ParametricProfileItem;
-                ParametricSteelProfiles.Add(item);
-            }
 
 
             this.MouseDown += delegate { DragMove(); };

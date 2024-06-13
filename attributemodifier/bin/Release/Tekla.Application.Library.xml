@@ -800,13 +800,6 @@
             <param name="type">The type value.</param>
             <returns>The System.Boolean.</returns>
         </member>
-        <member name="M:Tekla.Structures.Concrete.SingleRebarToRebarGroupConverter.IsLastTwoBars(System.Collections.IList)">
-            <summary>
-            Is last two bars.
-            </summary>
-            <param name="parallelRebars">The parallel reinforcement bars.</param>
-            <returns>The System.Boolean.</returns>
-        </member>
         <member name="M:Tekla.Structures.Concrete.SingleRebarToRebarGroupConverter.FindRebarGroups(System.Int32,System.Collections.ArrayList,System.Collections.ArrayList@)">
             <summary>The find reinforcement bar groups.</summary>
             <param name="primaryRebarIndex">The primary reinforcement bar index.</param>
@@ -1218,11 +1211,6 @@
             Length of the start hook.
             </summary>
         </member>
-        <member name="F:Tekla.Structures.Concrete.SplitRebarsInPart.minimumBarsLength">
-            <summary>
-            Minimum bars length.
-            </summary>
-        </member>
         <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.#ctor(Tekla.Structures.Concrete.SplitData,System.Collections.ArrayList)">
             <summary>Initializes a new instance of the <see cref="T:Tekla.Structures.Concrete.SplitRebarsInPart"/> class.</summary>
             <param name="splitData">The split data.</param>
@@ -1318,33 +1306,6 @@
             The undefined.
             </summary>
         </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.GetRebarLength(Tekla.Structures.Model.RebarGeometry,System.Boolean)">
-            <summary>
-            Get rebar length.
-            </summary>
-            <param name="geometry">rebar geometry</param>
-            <param name="roundUp">Round up output values</param>
-            <returns>rebar length</returns>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.SplitRebarsIfNeeded(Tekla.Structures.Concrete.SplitData,System.Collections.Generic.IList{Tekla.Structures.Model.SingleRebar},System.Collections.ArrayList@)">
-            <summary>
-            Split single rebars if needed.
-            </summary>
-            <param name="newSplitData">Split data.</param>
-            <param name="newSingleRebars">List of existing single rebars, which might need to be split.</param>
-            <param name="splitRebars">Splitted rebars</param>
-            <returns>True, when rebars has been successfully processed.</returns>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.SplitRebarsIfNeeded(Tekla.Structures.Concrete.SplitData,Tekla.Structures.Model.RebarGroup,System.Collections.ArrayList@,System.Int32)">
-            <summary>
-            Split rebar group if needed.
-            </summary>
-            <param name="newSplitData">Split data.</param>
-            <param name="rebarGroupToSplit">Existing rebar group, which might need to be split.</param>
-            <param name="splitRebars">Splitted rebars</param>
-            <param name="crossSection">Rebar group index, use for multiple groups in single part for continues splicing.</param>
-            <returns>True, when rebars has been successfully processed.</returns>
-        </member>
         <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.SplitRebarsIfNeeded(Tekla.Structures.Concrete.SplitData,System.Collections.ArrayList,System.Collections.ArrayList@)">
             <summary>The split reinforcement bars if needed.</summary>
             <param name="newSplitData">The split data.</param>
@@ -1356,117 +1317,6 @@
             <summary>The split reinforcement bars if needed.</summary>
             <param name="newSplitRebars">The split reinforcement bars.</param>
             <returns>The System.Boolean.</returns>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.PolygonForSplicing(System.Collections.IList,Tekla.Structures.Geometry3d.Point,Tekla.Structures.Geometry3d.Point@,Tekla.Structures.Geometry3d.Vector,System.Int32,System.Int32)">
-            <summary>
-            Polygon for splicing from start
-            </summary>
-            <param name="rebarPoints">Re-bar points</param>
-            <param name="last">Last point</param>
-            <param name="first">First point</param>
-            <param name="direction">Re-bar direction</param>
-            <param name="index">Polygon index</param>
-            <param name="count">Count of new polygons</param>
-            <returns>Polygon for re-bar group</returns>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.ReverseRebars(System.Collections.Generic.List{Tekla.Structures.Model.Polygon})">
-            <summary>
-            Reverse re-bars
-            </summary>
-            <param name="polygonList">Re-bars polygon list</param>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.GetLastPointFromGeometry(System.Collections.IList)">
-            <summary>
-            Get last point from geometry
-            </summary>
-            <param name="rebarPoints">Re-bar points</param>
-            <returns>Last point from re-bar geometry</returns>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.GetFirstPointFromGeometry(System.Collections.IList)">
-            <summary>
-            Get first point from re-bar geometry
-            </summary>
-            <param name="rebarPoints">Re-bar points</param>
-            <returns>First point from re-bar geometry</returns>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.GetSummaryReinforcementLengthOptions(System.Boolean@,System.Boolean@,System.Double@,System.Boolean@)">
-            <summary>
-            Get summary length options.
-            </summary>
-            <param name="useUserDefinedRebarLengthAndWeight">use user defined rebar length and weight</param>
-            <param name="useUserDefinedRebarShapeRules">use user defined rebar shape rules</param>
-            <param name="scheduleTotalLengthRoundingAccuracy">schedule total length rounding accuracy</param>
-            <param name="scheduleTotalLengthRoundingDirection">schedule total length rounding direction</param>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.ReadScheduleRounding(System.IO.StreamReader,System.Double@,System.Boolean@)">
-            <summary>
-            Read schedule rounding
-            </summary>
-            <param name="reader">Stream reader from the dile</param>
-            <param name="scheduleTotalLengthRoundingAccuracy">schedule total length rounding accuracy</param>
-            <param name="scheduleTotalLengthRoundingDirection">schedule total length rounding direction</param>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.GetTeklaAdvancedOption(System.String,System.String@)">
-            <summary>
-            Get Tekla advanced option
-            </summary>
-            <param name="variable">variable name</param>
-            <param name="variableValue">variable value</param>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.GetLegthVector(Tekla.Structures.Model.RebarGeometry,System.Int32)">
-            <summary>
-            Get length vector.
-            </summary>
-            <param name="geometry">reinforcement geometry</param>
-            <param name="index">actual index</param>
-            <returns>length vector</returns>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.SumOfSegLength(Tekla.Structures.Model.RebarGeometry)">
-            <summary>
-            Summary segment length (SSL).
-            </summary>
-            <param name="geometry">reinforcement geometry</param>
-            <returns>segment length (SSL)</returns>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.GetBendingRadius(Tekla.Structures.Model.RebarGeometry,System.Int32)">
-            <summary>
-            Get bending radius from geometry.
-            </summary>
-            <param name="geometry">reinforcement geometry</param>
-            <param name="index">index of bending radius</param>
-            <returns>bending radius</returns>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.RadiusDelta(Tekla.Structures.Geometry3d.Vector,Tekla.Structures.Geometry3d.Vector,System.Double)">
-            <summary>
-            Radius delta (between two vectors)
-            </summary>
-            <param name="vector1">vector 1</param>
-            <param name="vector2">vector 2</param>
-            <param name="radius">bending radius</param>
-            <returns>radius delta</returns>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.GetVectorLineSegment(Tekla.Structures.Geometry3d.Point,Tekla.Structures.Geometry3d.Point)">
-            <summary>
-            Get 3D vector from line segment.
-            </summary>
-            <param name="point1">point 1</param>
-            <param name="point2">point 2</param>
-            <returns>vector from line</returns>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.CenterLineLength(Tekla.Structures.Model.RebarGeometry)">
-            <summary>
-            Center line length (CLL).
-            </summary>
-            <param name="geometry">reinforcement geometry</param>
-            <returns>center line length</returns>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.MakeSingleRebarsFromPolygons(System.Collections.Generic.List{Tekla.Structures.Model.Polygon},Tekla.Structures.Model.Reinforcement)">
-            <summary>
-            Create single rebars from list of rebar shape polygons.
-            </summary>
-            <param name="rebarShapes">Rebar shape polygons.</param>
-            <param name="originalReinforcement">Existing reinforcement based on which new single rebars will be created.</param>
-            <returns>List of new single rebars.</returns>
         </member>
         <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.CalculateTotalOffset(System.Double,Tekla.Structures.Concrete.SplitRebarsInPart.SpliceSection,Tekla.Structures.Concrete.SplitRebarsInPart.BarPositions,System.Double,System.Double@,System.Double@,System.Double@)">
             <summary>The calculate total offset.</summary>
@@ -1505,9 +1355,10 @@
             <param name="splitRebarSet">The split reinforcement bar set.</param>
             <returns>The System.Boolean.</returns>
         </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.CreateEndRebar(Tekla.Structures.Model.SingleRebar,Tekla.Structures.Geometry3d.Vector,System.Collections.ArrayList,System.Double@,System.Double@)">
+        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.CreateEndRebar(Tekla.Structures.Model.SingleRebar,System.Double,Tekla.Structures.Geometry3d.Vector,System.Collections.ArrayList,System.Double@,System.Double@)">
             <summary>The create end rebar.</summary>
             <param name="currentOriginalRebar">The original rebar.</param>
+            <param name="maxLength">The max length.</param>
             <param name="splitPattern">The split pattern.</param>
             <param name="splitRebarSet">The split reinforcement bar set.</param>
             <param name="incrementalLength">The incremental length.</param>
@@ -1634,122 +1485,6 @@
             <param name="size">Rebar size</param>
             <param name="grade">Rebar grade</param>
             <returns>Rebar diameter</returns>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.SplitRebarGeometry(Tekla.Structures.Model.RebarGeometry,Tekla.Structures.Model.RebarGeometry,System.Int32)">
-            <summary>
-            Split re-bar
-            </summary>
-            <param name="geometryWithoutHooks">Re-bar geometry without hooks</param>
-            <param name="geometryWithHooks">Re-bar geometry with hooks</param>
-            <param name="index">Re-bar index</param>
-            <returns>New rebar polygons</returns>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.CheckMinimumDistance(System.Collections.Generic.List{Tekla.Structures.Model.Polygon})">
-            <summary>
-            Check minimum distances of rebars.
-            </summary>
-            <param name="rebarShapeList">List of rebar shapes.</param>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.ShortenNextRebar(System.Collections.Generic.List{Tekla.Structures.Model.Polygon},System.Double,System.Int32,Tekla.Structures.Geometry3d.Vector)">
-            <summary>
-            Shorten next rebar, so current rebar can have minimum length.
-            </summary>
-            <param name="rebarShapeList">List of rebar shapes.</param>
-            <param name="difference">Difference between current rebars length and minimum allowed length.</param>
-            <param name="rebarIndex">Index of the current rebar.</param>
-            <param name="direction">Direction for shortening.</param>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.ShortenPreviousRebar(System.Collections.Generic.IList{Tekla.Structures.Model.Polygon},System.Double,System.Int32,Tekla.Structures.Geometry3d.Vector)">
-            <summary>
-            Shorten previous rebar, so current rebar can have minimum length.
-            </summary>
-            <param name="rebarShapeList">List of rebar shapes.</param>
-            <param name="difference">Difference between current rebars length and minimum allowed length.</param>
-            <param name="rebarIndex">Index of the current rebar.</param>
-            <param name="direction">Direction for shortening.</param>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.GetRebarCount(System.Double)">
-            <summary>
-            Get count of re-bars
-            </summary>
-            <param name="rebarLength">Re-bar length</param>
-            <returns>Count of re-bars</returns>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.GetLengthList(System.Double,System.Int32,System.Double,System.Double)">
-            <summary>
-            Get list of re-bar lengths
-            </summary>
-            <param name="firstLastDistnace">Distance between first and last point of re-bar</param>
-            <param name="index">Re-bar index</param>
-            <param name="endHookRealLength">End hook real length</param>
-            <param name="startHookRealLength">Start hook real length</param>
-            <returns>List of re-bars lengths</returns>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.LengthsForSplicingFromStart(System.Collections.Generic.List{System.Double},System.Double,System.Double,System.Double)">
-            <summary>
-            Lengths for splicing from start.
-            </summary>
-            <param name="lengthList">List of rebars lengths.</param>
-            <param name="endHookRealLength">End hook real length.</param>
-            <param name="startHookRealLength">Start hook real length.</param>
-            <param name="ratio">Length ratio.</param>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.LengthsForSplicingFromSides(System.Collections.Generic.List{System.Double},System.Double,System.Double,System.Double)">
-            <summary>
-            Lengths for splicing from sides.
-            </summary>
-            <param name="lengthList">List of rebars lengths.</param>
-            <param name="firstLastDistnace">Distance between first and last point of re-bar.</param>
-            <param name="endHookRealLength">End hook real length.</param>
-            <param name="startHookRealLength">Start hook real length.</param>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.LengthsForSplicingFromMiddle(System.Collections.Generic.List{System.Double},System.Double,System.Int32,System.Double,System.Double,System.Double)">
-            <summary>
-            Lengths for splicing from middle.
-            </summary>
-            <param name="lengthList">List of rebars lengths.</param>
-            <param name="firstLastDistnace">Distance between first and last point of re-bar.</param>
-            <param name="index">Re-bar index.</param>
-            <param name="endHookRealLength">End hook real length.</param>
-            <param name="startHookRealLength">Start hook real length.</param>
-            <param name="ratio">Length ratio.</param>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.RestValuesForSplicingFromMiddle(System.Collections.Generic.List{System.Double},System.Double,System.Double,System.Double,System.Double)">
-            <summary>
-            Rest values for splicing from middle
-            </summary>
-            <param name="lengthList">List of rebars lengths.</param>
-            <param name="restLength">Rest length.</param>
-            <param name="endHookRealLength">End hook real length.</param>
-            <param name="startHookRealLength">Start hook real length.</param>
-            <param name="ratio">Length ratio.</param>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.GetRestLength(System.Double,System.Collections.Generic.List{System.Double},System.Double@,System.Double@,System.Boolean)">
-            <summary>
-            Get rest length
-            </summary>
-            <param name="restLength">Original rest length</param>
-            <param name="valueList">List of re-bars lengths</param>
-            <param name="restLength1">Rest length 1</param>
-            <param name="restLength2">Rest length 2</param>
-            <param name="one">True if only one value is needed on return</param>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.GetBasicValueList(System.Double)">
-            <summary>
-            Get basic value list
-            </summary>
-            <param name="firstLastDistnace">Distance between first and last point of re-bar</param>
-            <returns>List of re-bars lengths</returns>
-        </member>
-        <member name="M:Tekla.Structures.Concrete.SplitRebarsInPart.CheckDistances(System.Collections.Generic.List{Tekla.Structures.Model.Polygon},Tekla.Structures.Geometry3d.Point,System.Collections.ArrayList,Tekla.Structures.Geometry3d.Vector)">
-            <summary>
-            Check distances
-            </summary>
-            <param name="polygonList">Polygon list</param>
-            <param name="lastPoint">Last point</param>
-            <param name="rebarPoints">Re-bar points</param>
-            <param name="direction">Direction vector</param>
-            <returns>New rebar polygons</returns>
         </member>
         <member name="T:Tekla.Structures.Configuration">
             <summary>

@@ -1243,11 +1243,6 @@
             Removes the data storage class that communicates with Tekla Structures.
             </summary>
         </member>
-        <member name="M:Tekla.Structures.Dialog.PluginWindowBase.DoShowWindow">
-            <summary>
-            Shows the dialog.
-            </summary>
-        </member>
         <member name="M:Tekla.Structures.Dialog.PluginWindowBase.DoLoad">
             <summary> It raises the Load event. </summary>
         </member>

@@ -6,11 +6,11 @@
         xmlns:local="clr-namespace:attributemodifier"
         xmlns:UIControls="clr-namespace:Tekla.Structures.Dialog.UIControls;assembly=Tekla.Structures.Dialog" xmlns:Catalogs="clr-namespace:Tekla.Structures.Catalogs;assembly=Tekla.Structures.Catalogs" x:Class="attributemodifier.MainWindow"
         mc:Ignorable="d"
-        Title="Attribute modifier" Height="508.667" Width="400" Background="White" Foreground="Black"   ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStyle="None" WindowStartupLocation="CenterOwner">
+        Title="Attribute modifier" Height="519.667" Width="400" Background="White" Foreground="Black"   ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStyle="None" WindowStartupLocation="CenterOwner">
     <Grid Margin="0,0,0,69" RenderTransformOrigin="0.492,1.002">
 
         <TabControl Width="400" Margin="0,0,0,-67">
-            <TabItem Header="PARTS" Margin="0,-2,-1,0" Width="75">
+            <TabItem Header="PARTS" FontWeight="Bold" FontSize="17"  Foreground="#FF28458C" Margin="0,-2,-1,0" Width="75">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="112*"/>
@@ -109,7 +109,7 @@
 
                 </Grid>
             </TabItem>
-            <TabItem Header="BOLTS" Margin="13,-2,-51,0">
+            <TabItem Header="BOLTS" FontWeight="Bold" FontSize="17"  Foreground="#FF28458C" Margin="13,-2,-51,0">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="16*"/>
@@ -184,7 +184,7 @@
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
                         </CheckBox.LayoutTransform>
                     </CheckBox>
-                    <Button Margin="10,428,284,11" Content="Select all" Click="Button_Click_1" Width="100" Height="40" BorderThickness="2" Grid.ColumnSpan="6" Foreground="#FF28458C" Background="White" BorderBrush="#FF28458C" FontWeight="Bold" FontSize="16" />
+                    <Button Margin="8,430,286,13" Content="Select all" Click="Button_Click_1" Width="100" Height="40" BorderThickness="2" Grid.ColumnSpan="6" Foreground="#FF28458C" Background="White" BorderBrush="#FF28458C" FontWeight="Bold" FontSize="16" />
                     <Button Grid.Column="5" Margin="70,428,172,11" RenderTransformOrigin="0.5,0.5" Content="Unselect all" BorderThickness="2" Click="Button_Click_4" Width="100" Height="40" Foreground="#FF28458C" BorderBrush="#FF28458C" Background="White" FontWeight="Bold" FontSize="16" />
                     <ComboBox x:Name="combobox_slotted" Grid.Column="5" HorizontalAlignment="Left" Margin="187,280,0,0" VerticalAlignment="Top" Width="120" Height="25" FontSize="14"/>
                     <TextBlock HorizontalAlignment="Left" Margin="73,192,0,0" TextWrapping="Wrap" Text="Stud length" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" Grid.Column="5" FontSize="14" FontWeight="Bold" Foreground="#FF28458C"/>
@@ -209,7 +209,7 @@
 
         </TabControl>
 
-        <Button Content="Modify" HorizontalAlignment="Left" Margin="284,453,0,-53" Width="100" Click="Button_Click"  BorderThickness="2" RenderTransformOrigin="0.5,0.5" Height="40" VerticalAlignment="Top" BorderBrush="#FF28458C" Background="White" Foreground="#FF28458C" FontWeight="Bold" FontSize="16">
+        <Button Content="Modify" HorizontalAlignment="Left" Margin="284,463,0,-52" Width="100" Click="Button_Click"  BorderThickness="2" RenderTransformOrigin="0.5,0.5" Height="40" VerticalAlignment="Top" BorderBrush="#FF28458C" Background="White" Foreground="#FF28458C" FontWeight="Bold" FontSize="16">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -219,6 +219,6 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="X" HorizontalAlignment="Left" Margin="342,0,0,0" VerticalAlignment="Top" Width="58" FontSize="16" Height="22" FontWeight="Bold"  FontFamily="Arial Black" Background="#FFF94848" AutomationProperties.Name="shutdownbutton" Click="Button_Click_3" BorderBrush="#FFF94848"/>
+        <Button Content="X" HorizontalAlignment="Left" Margin="342,0,0,0" VerticalAlignment="Top" Width="58" FontSize="16" Height="29" FontWeight="Bold"  FontFamily="Arial Black" Background="#FFFF5353" AutomationProperties.Name="shutdownbutton" Click="Button_Click_3" BorderBrush="#FFDE6868"/>
     </Grid>
 </Window>
