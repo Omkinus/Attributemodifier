@@ -137,7 +137,7 @@
                     <TextBlock HorizontalAlignment="Left" Margin="109,230,0,0" TextWrapping="Wrap" Text="Slotted hole X" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" FontSize="14" FontWeight="Bold" Foreground="#FF28458C" Grid.Row="1"/>
                     <TextBlock HorizontalAlignment="Left" Margin="109,260,0,0" TextWrapping="Wrap" Text="Slotted hole Y" VerticalAlignment="Top" RenderTransformOrigin="0.498,0.251" FontSize="14" FontWeight="Bold" Foreground="#FF28458C" Grid.Row="1"/>
                     <UIControls:WpfBoltCatalogSize x:Name="boltcatalogsize" HorizontalAlignment="Left" Margin="239,39,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding BoltSizes, ElementName=boltcatalog_standard}" FontSize="14" Height="25"/>
-                    <UIControls:WpfBoltCatalogStandard x:Name="boltcatalog_standard"   HorizontalAlignment="Left" Margin="239,69,0,0" VerticalAlignment="Top" Width="120" FontSize="14" Height="25" Grid.RowSpan="2" />
+                    <UIControls:WpfBoltCatalogStandard x:Name="boltcatalog_standard"   HorizontalAlignment="Left" Margin="239,69,0,0" VerticalAlignment="Top" Width="120" FontSize="14" Height="25" Grid.RowSpan="2" IsSynchronizedWithCurrentItem="True" />
                     <CheckBox  x:Name="checkbox_boltsize" HorizontalAlignment="Left" Margin="216,44,0,0" VerticalAlignment="Top" FontSize="0.01" BorderBrush="#FF052061" Width="17">
                         <CheckBox.LayoutTransform>
                             <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>

@@ -65,8 +65,6 @@ namespace attributemodifier
             combobox_plainholetype.Items.Add("Blind");
             combobox_plainholetype.Items.Add("Through");
 
-
-
         }
 
         /*---------------------------------------КНОПКИ----------------------------------------------------*/

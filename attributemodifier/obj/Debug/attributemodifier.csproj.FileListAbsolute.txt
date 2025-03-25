@@ -114,3 +114,4 @@ D:\my repos\Attributemodifier\attributemodifier\obj\Debug\attributemodifier.exe
 D:\my repos\Attributemodifier\attributemodifier\obj\Debug\attributemodifier.pdb
 D:\my repos\Attributemodifier\attributemodifier\obj\Debug\App.baml
 C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\obj\Debug\App.baml
+C:\Users\User\_teklaplugins\Attributemodifier\attributemodifier\obj\Debug\attributemodifier.csprojAssemblyReference.cache
